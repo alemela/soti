@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="static/logo.png" height="38" alt="Logo">
+    </a>
+
+    <form class="form-inline flex-fill my-2 my-lg-0 ml-auto" onsubmit="event.preventDefault(); wannaSearch(event.target[0].value)">
+      <div class="input-group flex-fill">
+        <input class="form-control flex-fill" type="search" placeholder="Scrivi la ricetta che vuoi cercare..." aria-label="Scrivi la ricetta che vuoi cercare...">
+        <div class="input-group-append">
+          <button class="btn btn-outline-danger" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</nav>

@@ -1,0 +1,62 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-04-01",
+    "dataUltimoAggiornamento": "2023-04-01",
+    "imageUrl": "https://cataas.com/cat",
+    "identificativo": "salvia-fritta",
+    "portata": "Contorno",
+    "cucina": "Italiana",
+    "cottura": "Fritto",
+    "difficoltà": 2,
+    "tag": ["salato", "caldo", "vegetariano", "vegano","pochi-ingredienti", "year-round", "snack", "finger-food"],
+    "titolo": "Salvia fritta",
+    "sottotitolo": "Chiatri, oh Chiatri!",
+    "numeroPorzioni": 4,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 15
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 20
+        },
+        {
+            "nome": "Totale",
+            "minuti": 35
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "main",
+            "nome": "foglie di salvia carnose",
+            "quantità": 40.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "olio di semi",
+            "quantità": null,
+            "unità": "q.b."
+        },
+        {   "sezione": "main",
+            "nome": "birra",
+            "quantità": 330.0,
+            "unità": "ml"
+        },
+        {   "sezione": "main",
+            "nome": "farina",
+            "quantità": null,
+            "unità": "q.b."
+        }
+    ],
+    "preparazione": [
+        "Innanzitutto preparare la pastella: in una ciotola mettere della farina e aggiungere la lattina di birra poco alla volta, incorporandola per ottenere un impasto abbastanza liquido da colare, ma abbastanza solido da <i>scrivere</i>.",
+        "Le quantità sono molto variabili a seconda del numero, le dimensioni e quanta pastella piace avere attorno alle singole foglie. Si consiglia di prepararne una certa quantità seguendo il proprio cuore e iniziare a inzuppare le foglie nella pastella, se non basta ...farne altra.",
+        "Scaldare l'olio in un pentolino e fare la prova del mestolo (immergere il manico nell'olio: se fa le bollicine l'olio ha una temperatura sufficiente) dopo qualche minuto.",
+        "Quando l'olio è ben caldo e le foglie pronte (ovvero se sono state lavate, asciugate e passate nella pastella), si può iniziare a metterle nell'olio con una decina di secondi di distanza una dall'altra (in modo tale che non si attacchino una all'altra).",
+        "Anche il tempo di cottura è variabile secondo i gusti: se si preferisce una pastella più morbida basta circa un minuto di cottura, se la si vuole croccante, bisogna guardare quando il colore inizia a diventare brunastro."
+    ],
+    "note": "Una ricetta particolare, per i curiosi che hanno accesso a foglie di salvia come Dio comanda.",
+    "fonte": "Mamma",
+    "autore": "Sofina"
+}

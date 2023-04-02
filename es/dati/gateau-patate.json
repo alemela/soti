@@ -1,0 +1,83 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-04-01",
+    "dataUltimoAggiornamento": "2023-04-01",
+    "imageUrl": "https://cataas.com/cat",
+    "identificativo": "gateau-patate",
+    "portata": "Secondo piatto",
+    "cucina": "Italiana",
+    "cottura": "Al forno",
+    "difficoltà": 2,
+    "tag": ["carne", "salato", "riuso", "gustoso", "caldo", "verdura", "inverno", "latticini", "cena", "sformato"],
+    "titolo": "Gateau di patate",
+    "sottotitolo": "<i>Gattò</i> per gli scarsi",
+    "numeroPorzioni": 4,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 40
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 30
+        },
+        {
+            "nome": "Totale",
+            "minuti": 70
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "main",
+            "nome": "patate",
+            "quantità": 5.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "pancetta",
+            "quantità": 125.0,
+            "unità": "grammi"
+        },
+        {   "sezione": "main",
+            "nome": "mozzarella",
+            "quantità": 2.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "parmigiano",
+            "quantità": null,
+            "unità": "q.b."
+        },
+        {   "sezione": "main",
+            "nome": "burro",
+            "quantità": null,
+            "unità": "q.b."
+        },
+        {   "sezione": "main",
+            "nome": "noce moscata",
+            "quantità": null,
+            "unità": "q.b."
+        },
+        {   "sezione": "main",
+            "nome": "pepe",
+            "quantità": null,
+            "unità": "q.b."
+        },
+        {   "sezione": "main",
+            "nome": "pan grattato",
+            "quantità": null,
+            "unità": "q.b."
+        }
+    ],
+    "preparazione": [
+        "Sbucciare le patate e tagliarle in pezzi. Metterle in una pentola di acqua bollente salata e cuocerle finché non risultano morbide (ma non sfatte), indicativamente per 10-15 minuti.",
+        "Nel frattempo accendere il forno e farlo arrivare a 180°. Cuocere in una padella la pancetta in modo tale che sia croccante ma non troppo asciutta.",
+        "Scolare le patate e schiacciarle con una forchetta (o con un passaverdure se lo si preferisce) in un ciotolo.",
+        "Aggiungere il parmigiano secondo il proprio gusto, la noce moscata, le mozzarelle tagliata in cubetti (precedentemente fatta scolare), il pepe e la pancetta, e mescolare.",
+        "Imburrare e cospargere di pan grattato una teglia e adagiarvi il composto. Livellare quest'ultimo, cospargerlo di parmigiano reggiano e occhettare alcuni riccioli di burro sulla superce.",
+        "Infornare a 180° i primi 15' e poi in impostazione grill per altri 15'."
+    ],
+    "note": "Questa ricetta si adatta perfettamente ad accogliere rimasugli di formaggi e salumi che avanzano sempre in frigo: va bene il salame, il prosciutto cotto, la scamorza, l'asiago e più o meno qualsiasi formaggio di media stagionatura. <br> A giallozafferano piace metterci le uova, a me un mi ci garbino, diventa pesante e basta. <br> Come per il <a href='/ricetta?id=cavolfiore-gratinato'>cavolore gratinato</a>, dà soddisfazione gustare il gateau ancora nella teglia calda di forno, preferibilmente guardando un film, o anime giappo.",
+    "fonte": null,
+    "autore": "Sofina"
+}

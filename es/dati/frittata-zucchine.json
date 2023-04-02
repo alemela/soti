@@ -1,0 +1,67 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-03-12",
+    "dataUltimoAggiornamento": "2023-03-12",
+    "imageUrl": "https://cataas.com/cat",
+    "identificativo": "frittata-zucchine",
+    "portata": "Secondo Piatto",
+    "cucina": "Italiana",
+    "cottura": "Cotto",
+    "difficoltà": 1,
+    "tag": ["riuso", "gustoso", "vegetariano", "salato"],
+    "titolo": "Frittata di zucchine",
+    "sottotitolo": "Una leggera frittatina per alleviare la giornata",
+    "numeroPorzioni": 2,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 10
+            },
+        {
+            "nome": "Cottura",
+            "minuti": 15
+        },
+        {
+            "nome": "Totale",
+            "minuti": 25
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "Ripieno",
+            "nome": "Zucchine",
+            "quantità": 2.0,
+            "unità": "unità"
+        },
+        {   "sezione": "Ripieno",
+            "nome": "Cipolle",
+            "quantità": 0.5,
+            "unità": "unità"
+        },
+        {   "sezione": "Ripieno",
+            "nome": "Olio evo",
+            "quantità": null,
+            "unità": "q.b."
+        },
+        {   "sezione": "Frittata",
+            "nome": "uova",
+            "quantità": 4.0,
+            "unità": "unità"
+        },
+        {   "sezione": "Frittata",
+            "nome": "Parmigiano",
+            "quantità": null,
+            "unità": "q.b."
+        }  
+    ],
+    "preparazione": [
+        "Fai il soffritto",
+        "Poi cuoci le zucchine a rondelle",
+        "In una scodellina rompi le uova, aggiungi pepe, parmigiano, prezzemolo",
+        "Cuoci su fuoco medio, poi prendi un piatto e ribalta la frittata",
+        "Quando ben cotta scodella e gusta!"
+    ],
+    "note": "Qui s'è fatta con le zucchine, ma la frittata è un ottimo modo per smaltire tutta quella roba in frigo che è troppa poca per essere usata, come pezzetti di prosciutto, verdure scarse o rimasugli di formaggi.",
+    "fonte": "Babbozzo",
+    "autore": "Sofina"
+}

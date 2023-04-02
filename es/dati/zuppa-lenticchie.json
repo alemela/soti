@@ -1,0 +1,82 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-03-25",
+    "dataUltimoAggiornamento": "2023-04-01",
+    "identificativo": "zuppa-lenticchie",
+    "portata": "Primo piatto",
+    "cucina": "Italiana",
+    "cottura": "Cotto",
+    "difficoltà": 2,
+    "tag": ["caldo", "zuppa", "vegetariano", "gustoso"],
+    "titolo": "Zuppa di lenticchie",
+    "sottotitolo": "Una zuppa ristoratrice per l'inverno",
+    "numeroPorzioni": 2,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 15
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 45
+        },
+        {
+            "nome": "Totale",
+            "minuti": 60
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "Zuppa",
+            "nome": "Lenticchie secche",
+            "quantità": 200.0,
+            "unità": "grammi"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Carota",
+            "quantità": 0.5,
+            "unità": "unità"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Cipolla",
+            "quantità": 0.5,
+            "unità": "unità"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Patata",
+            "quantità": 1.0,
+            "unità": "unità"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Costa di sedano",
+            "quantità": 1.0,
+            "unità": "unità"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Pomodoro",
+            "quantità": 1.0,
+            "unità": "unità"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Vino bianco",
+            "quantità": 0.5,
+            "unità": "bicchiere"
+        },
+        {   "sezione": "Zuppa",
+            "nome": "Rosmarino",
+            "quantità": null,
+            "unità": "q.b."
+        }
+    ],
+    "preparazione": [
+        "Trita finemente carota, sedano e cipolla e soffriggili in un po’ d’olio evo in una pentola capiente.",
+        "Nel frattempo fai scaldare un po’ d’acqua in un pentolino.",
+        "Quando il soffritto è imbiondito aggiungi le lenticchie, il rosmarino, la patata sbucciata e a cubettoni e il pomodoro a pezzi e girali nel soffritto per un paio di minuti per insaporire tutto.",
+        "Aggiungi il vino e fallo sfumare.",
+        "Quando è evaporata tutta la parte alcolica aggiungi l’acqua per coprire tutti gli ingredienti.",
+        "Fai cuocere per almeno 40 minuti. Regolare ogni tanto l’acqua in modo tale che non si asciughi e girare affinché non si attacchi."
+    ],
+    "note": "Se si vuole dare una nota in più si può aggiungere la pancetta, da mettere subito dopo aver imbiondito il soffritto ma prima di aggiungere gli altri ingredienti.",
+    "fonte": "Credo Giallo Zafferano",
+    "autore": "Sofina"
+}

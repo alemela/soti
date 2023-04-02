@@ -1,0 +1,50 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-03-12",
+    "dataUltimoAggiornamento": "2023-04-01",
+    "imageUrl": "https://cataas.com/cat",
+    "identificativo": "example",
+    "portata": "Primo piatto",
+    "cucina": "Italiana",
+    "cottura": "Cotto",
+    "difficoltà": 4,
+    "tag": ["primavera", "dolce", "freddo"],
+    "titolo": "Nome",
+    "sottotitolo": "sottotitolo",
+    "numeroPorzioni": 2,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 60
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 120
+        },
+        {
+            "nome": "Totale",
+            "minuti": 180
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "sugo",
+            "nome": "carote",
+            "quantità": 12.0,
+            "unità": "unità"
+        },
+        {   "sezione": "pasta",
+            "nome": "cipolle",
+            "quantità": 4.0,
+            "unità": "grammi"
+        }   
+    ],
+    "preparazione": [
+        "Nella prima parte devi fare questo e questo",
+        "Poi devi prendere quello e quello",
+        "Infine fai questo e quest'altro"
+    ],
+    "note": "Ti consiglio di fare questa serie di cose se vuoi ballare.",
+    "fonte": "www.allocchi.rom",
+    "autore": "Sofina"
+}

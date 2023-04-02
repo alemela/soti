@@ -1,0 +1,76 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h5>{{portata}}</h5>
+      <h1>{{{titolo}}}</h1>
+      <p class="sottotitolo">{{{sottotitolo}}}</p>
+
+      {{#tag}}<a class="badge badge-pill badge-dark text-uppercase" href="/?tags={{.}}">{{.}}</a> {{/tag}}
+
+      <br><br><br>
+
+      <div class="card shadow-lg">
+        <div class="row no-gutters">
+          <div class="col-md-8 d-flex align-items-center">
+            <img src="{{#imageUrl}}{{imageUrl}}{{/imageUrl}}{{^imageUrl}}/static/images/{{identificativo}}.png{{/imageUrl}}" class="card-img img-fluid" alt="{{identificativo}}" style="object-fit: cover; max-height: 400px;">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 border-bottom">
+                  <p>Cucina: <b>{{cucina}}</b></p>
+                  <p>Cottura: <b>{{cottura}}</b></p>
+                  <p>Difficoltà: <b>{{difficoltà}}/5</b></p>
+                  <p>Numero porzioni: <b>{{numeroPorzioni}}</b></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 border-top">
+                  <br>
+                  {{#tempi}}<p>{{nome}}: <b>{{minuti}} min</b></p>{{/tempi}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-8" style="padding:0">
+        <h3>Ingredienti</h3>
+        <hr style="border: 1px solid black;">
+
+        <ul class="pl-3">
+          {{#ingredienti}}
+          <li>{{nome}}: {{quantità}} {{unità}}</li>
+          {{/ingredienti}}
+        </ul>
+
+        <h3>Preparazione</h3>
+        <hr style="border: 1px solid black;">
+
+        <ol class="pl-4">
+          {{#preparazione}}
+          <li>{{{.}}}</li>
+          {{/preparazione}}
+        </ol>
+
+        <h3>Note</h3>
+        <hr style="border: 1px solid black;">
+
+        <p>{{{note}}}</p>
+
+        <br><br>
+
+        <div class="border p-3" style="border-style: dashed double;">
+          <p>Fonte: {{fonte}}</p>
+          <p>Autore: {{autore}}</p>
+          <p>Ultimo aggiornamento: {{dataUltimoAggiornamento}}</p>
+        </div>
+
+        <br><br><br><br>
+
+      </div>
+    </div>
+  </div>
+</div>

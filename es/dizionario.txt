@@ -1,0 +1,51 @@
+portata
+ - Appetizer
+ - Primo piatto
+ - Secondo piatto
+ - Piatto unico
+ - Contorno
+ - Snack
+ - Dessert
+ - Salsa, crema e condimenti
+ - Panosi
+
+cucina
+ - Italiana
+ - Asiatica
+ - Inglese
+ - Greca
+ - Indiana
+ - Coreana
+ - Cinese
+ - Giapponese
+ - Fusion
+ - Francese
+
+cottura
+ - Al forno
+ - Fritto
+ - Bollito
+ - Arrostito
+ - Senza cottura
+ - Fermentato
+ - Grigliato
+ - Al vapore
+ - Cotto
+ - Stufato
+
+difficoltà
+ - 1: Molto facile
+ - 2: Facile 
+ - 3: Intermedio
+ - 4: Difficile
+ - 5: Molto difficile
+
+
+nei tag 
+- sapore (dolce, salato, amaro, piccante, acido, umami)
+- dieta (vegetariano, leggero, celiaco, vegano)
+- fancyness (gustoso, riuso, classico, caldo, freddo, fresco)
+- stagioni (inverno, primavera, estate, autunno, year-round)
+- ingredienti (carne, pesce, verdura, formaggio, latticini, pochi-ingredienti, frutta, alcol)
+- pasto (colazione, pranzo, cena, brunch, snack)
+- tipo di roba (pane, zuppa, crema, sformato, torta, finger-food)

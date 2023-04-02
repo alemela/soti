@@ -1,0 +1,34 @@
+#navbar>nav {
+  background-color: #fff !important;
+  border-bottom: 1px solid;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: #f7f6f8;
+  min-height: 100vh;
+  position: relative;
+}
+
+footer {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  border-top: 1px solid;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  #navbar>nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  body {
+    padding-top: 3rem;
+  }
+}

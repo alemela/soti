@@ -1,0 +1,1 @@
+autossh -L 9200:localhost:9200 95.217.134.197

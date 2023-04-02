@@ -1,0 +1,80 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-04-01",
+    "dataUltimoAggiornamento": "2023-04-01",
+    "imageUrl": "https://cataas.com/cat",
+    "identificativo": "torta-7-vasetti",
+    "portata": "Dessert",
+    "cucina": "Italiana",
+    "cottura": "Al forno",
+    "difficoltà": 2,
+    "tag": ["dolce", "vegetariano", "leggero", "year-round", "latticini","colazione", "snack", "torta"],
+    "titolo": "Torta 7 vasetti",
+    "sottotitolo": "Un vasetto per domarli tutti",
+    "numeroPorzioni": 4,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 20
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 45
+        },
+        {
+            "nome": "Totale",
+            "minuti": 65
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "main",
+            "nome": "yogurt bianco intero (vasetto 125ml)",
+            "quantità": 1.0,
+            "unità": "vasetto"
+        },
+        {   "sezione": "main",
+            "nome": "zucchero",
+            "quantità": 2.0,
+            "unità": "vasetto"
+        },
+        {   "sezione": "main",
+            "nome": "farina",
+            "quantità": 2.0,
+            "unità": "vasetto"
+        },
+        {   "sezione": "main",
+            "nome": "fecola di patate",
+            "quantità": 1.0,
+            "unità": "vasetto"
+        },
+        {   "sezione": "main",
+            "nome": "olio di semi",
+            "quantità": 1.0,
+            "unità": "vasetto"
+        },
+        {   "sezione": "main",
+            "nome": "uova",
+            "quantità": 3.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "lievito in polvere",
+            "quantità": 16.0,
+            "unità": "grammi"
+        },
+        {   "sezione": "main",
+            "nome": "limone",
+            "quantità": 1.0,
+            "unità": "unità"
+        }
+    ],
+    "preparazione": [
+        "In una ciotola riunire gli ingredienti liquidi: uova leggermente sbattute, yogurt, olio e mescolare bene con una frusta.",
+        "Aggiungere lo zucchero, la farina, la fecola, eventualmente la scorza di limone grattugiato se si vuole profumare leggermente il dolce e il lievito per ultimo e amalgamare bene il composto in modo da renderlo cremoso e senza grumi.",
+        "Versare il tutto in una tortiera imburrata e infarinata e infornare in un forno preriscaldato a 170° e cuocere per circa 45 minuti. Fare la prova dello stecchino (A.0.1) prima di sfornare per controllare che il dolce sia ben asciutto."
+    ],
+    "note": "Questo dolce è perfetto per la colazione o per accompagnare un tè. Si adatta molto bene ad essere farcito all'interno con confetture oppure se ne può anche fare una versione con una parte di cacao nell'impasto.",
+    "fonte": "Babbo",
+    "autore": "Sofina"
+}

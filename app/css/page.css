@@ -1,0 +1,26 @@
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #0f0f0e;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #0f0f0e;
+  padding-top: 2rem;
+}
+
+h5 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.sottotitolo {
+  font-style: italic;
+}

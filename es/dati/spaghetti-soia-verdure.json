@@ -1,0 +1,70 @@
+{
+    "versioneSchema": "1.0.0",
+    "dataInserimento": "2023-04-01",
+    "dataUltimoAggiornamento": "2023-04-01",
+    "imageUrl": "https://cataas.com/cat",
+    "identificativo": "spaghetti-soia-verdure",
+    "portata": "Primo piatto",
+    "cucina": "Asiatica",
+    "cottura": "Cotto",
+    "difficoltà": 3,
+    "tag": ["vegetariano", "year-round", "verdura", "pranzo"],
+    "titolo": "Spaghettini di soia alle verdure",
+    "sottotitolo": "Per una spolverata orientale",
+    "numeroPorzioni": 2,
+    "tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 15
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 30
+        },
+        {
+            "nome": "Totale",
+            "minuti": 45
+        }
+    ],
+    "ingredienti": [
+        {
+            "sezione": "main",
+            "nome": "spaghetti di soia",
+            "quantità": 160.0,
+            "unità": "grammi"
+        },
+        {   "sezione": "main",
+            "nome": "patate medie",
+            "quantità": 3.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "zucchina",
+            "quantità": 1.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "scalogni",
+            "quantità": 3.0,
+            "unità": "unità"
+        },
+        {   "sezione": "main",
+            "nome": "salsa di soia",
+            "quantità": null,
+            "unità": "q.b."
+        }   
+    ],
+    "preparazione": [
+        "Tagliare in dadini con lato non maggiore di un 1 cm le patate e le zucchine.",
+        "Far appassire la cipolla o lo scalogno tagliato a pezzi piccoli in una padella capiente con un lo d'olio. Mettere sul fuoco una pentola con acqua salata.",
+        "Nel momento in cui la cipolla inizia a colorarsi ed è morbida, aggiungere le patate in dadini.",
+        "Quando le patate iniziano a diventare più morbide e vagamente traslucide (dopo circa 7 minuti), aggiungere anche le zucchine che dovranno cuocere almeno 10 minuti.",
+        "Tre-quattro minuti prima che le zucchine siano pronte, mettere sul fuoco un pentolino da latte con un dito di soia e altrettanta acqua - deve scaldarsi ma non bollire, spegnere appena è calda. Buttare gli spaghttini nell'acqua bollente precedentemente preparata e spegnere il fuoco.",
+        "Irrorare le verdure con della soia e assaggiare (la soia fa le veci del sale, attenzione a non esagerare) e saltare e girare le verdure.",
+        "A seconda della marca potrebbe volerci un minuto e mezzo o tre per cuocere gli spaghettini; assaggiare e scolare se cotti.",
+        "Aggiungere gli spaghettini alle verdure e saltare. Servire e irrorare con la soia diluita per non farli <i>appizzare</i> e renderli sugosi."
+    ],
+    "note": "Si può mettere una carota al posto di una delle patate (da mettere in padella insieme alle patate), oppure aggiungere anche un peperone se piace.",
+    "fonte": null,
+    "autore": "Sofina"
+}
