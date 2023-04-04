@@ -60,6 +60,27 @@ const search = function (q) {
         //filtri
         $('#tags-filter').html(generateTags(data.aggregations.tags.buckets));
 
+        $('input:checkbox').change(function() {
+          console.log('Toggle: ' + $(this).prop('checked'));
+          console.log("Change event: " + this.id);
+
+          const url = new URL(window.location.href);
+          console.log(url.href)
+          const actualTags = url.searchParams.get('tags');
+          console.log(actualTags)
+          if ( $(this).prop('checked') ) {
+            if (!actualTags) {
+              url.searchParams.set('tags', this.id);
+            } else {
+              url.searchParams.set('tags', actualTags + "|" + this.id);
+            }
+          } else {
+            //urlParams.remove('tags', this.id) //TODO
+          }
+          console.log(url.href)
+          window.location.href = url.href; //XXX è scomodo che ricarichi
+        })
+
     })
     .catch(error => console.error("Errore: " +  error));
 }
@@ -107,13 +128,14 @@ const renderCard = function (data) {
 }
 
 function generateTags(tags) {
-    const output = [];
+  const output = [];
 
-    for (tag in tags) {
-        output.push(`<li>${tags[tag].key} - ${tags[tag].doc_count}</li>`)
-    }
+  for (tag in tags) {
+    output.push(`<input class="form-check-input" type="checkbox" value="" id="${tags[tag].key}">`);
+    output.push(`<label class="form-check-label" for="${tags[tag].key}">${tags[tag].key} - ${tags[tag].doc_count}</label><br>`);
+  }
 
-    return output.join(" ");
+  return output.join(" ");
 }
 
 function loadPage (query) {
@@ -139,3 +161,11 @@ $(document).ready(function() {
 
 
 loadPage();
+
+//TODO finire la lettura dei parametri URL per disegnare la zona dei filtri attivi
+const searchParams = new URLSearchParams(window.location.search);
+console.log(Array.from(searchParams.keys()))
+for (const key of searchParams.keys()) {
+  console.log(key);
+  console.log(searchParams.get(key))
+}

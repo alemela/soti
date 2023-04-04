@@ -17,28 +17,32 @@
   <div id="navbar"></div>
 
 	<div class="container mt-5">
-	  <nav class="navbar navbar-expand-lg">
-			<div class="container">
+		<div class="col-lg-10">
+		  <nav class="navbar navbar-expand-lg">
 			  <h3><span id="ricetteCount"></span> RICETTE</h3>
 			  <div class="btn-group ml-auto">
-				<div class="dropdown" style="margin-right:1rem">
-				  <button class="btn btn-outline-success my-2 my-sm-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Ordina per
-				  </button>
-				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="#">Prezzo crescente</a>
-					<a class="dropdown-item" href="#">Prezzo decrescente</a>
-					<a class="dropdown-item" href="#">Nome A-Z</a>
-					<a class="dropdown-item" href="#">Nome Z-A</a>
-				  </div>
-				</div>
+					<div class="dropdown" style="margin-right:1rem">
+					  <button class="btn btn-outline-secondary my-2 my-sm-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Ordina per
+					  </button>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Prezzo crescente</a>
+						<a class="dropdown-item" href="#">Prezzo decrescente</a>
+						<a class="dropdown-item" href="#">Nome A-Z</a>
+						<a class="dropdown-item" href="#">Nome Z-A</a>
+					  </div>
+					</div>
 
-				<button class="btn btn-outline-success my-2 my-sm-0" id="sidebarToggle">
-				  <i class="fas fa-filter"></i> Filtra
-				</button>
+					<button class="btn btn-outline-secondary my-2 my-sm-0" id="sidebarToggle">
+					  <i class="fas fa-filter"></i> Filtra
+					</button>
 			  </div>
-			</div>
-	  </nav>
+		  </nav>
+		</div>
+
+		<div class="col-lg-10">
+			<div class="container" id="filtri"></div>
+		</div>
 
 	  <div class="sidebar">
 			<div class="sidebar-header">
@@ -88,11 +92,18 @@
 						  </button>
 						</h5>
 					  </div>
+
 					  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-						<div class="card-body" id="tags-filter"></div>
+							<div class="card-body">
+								<div class="form-check" id="tags-filter">
+									<!--<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+									<label class="form-check-label" for="defaultCheck1">Default checkbox</label>-->
+								</div>
+							</div>
 					  </div>
 					</div>
-				  </div>
+
+				</div>
 			</div>
 	  </div>
 	</div>
