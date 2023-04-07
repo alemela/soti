@@ -34,8 +34,15 @@ const search = function (q) {
         let count = document.getElementById("ricetteCount");
         count.innerHTML = data.hits.total.value;
 
+
         for (i = 0; i < data.hits.hits.length; i++) {
-            renderCard(data.hits.hits[i]._source);
+          const hl = data.hits.hits[i].highlight;
+          console.log(hl)
+          for (key in hl) {
+            console.log(hl[key]) //TODO finire l'hl, l'idea è di sostituire i campi dentro source se le chiavi sono presenti e aggiungere un boxino sotto se non lo sono
+          }
+
+          renderCard(data.hits.hits[i]._source);
         }
 
         const urlParams = new URLSearchParams(window.location.search);
