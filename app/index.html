@@ -17,103 +17,40 @@
   <div id="navbar"></div>
 
 	<div class="container mt-5">
-		<div class="col-lg-10">
-		  <nav class="navbar navbar-expand-lg">
-			  <h3><span id="ricetteCount"></span> RICETTE</h3>
-			  <div class="btn-group ml-auto">
-					<div class="dropdown" style="margin-right:1rem">
-					  <button class="btn btn-outline-secondary my-2 my-sm-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Ordina per
-					  </button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Prezzo crescente</a>
-						<a class="dropdown-item" href="#">Prezzo decrescente</a>
-						<a class="dropdown-item" href="#">Nome A-Z</a>
-						<a class="dropdown-item" href="#">Nome Z-A</a>
-					  </div>
-					</div>
-
-					<button class="btn btn-outline-secondary my-2 my-sm-0" id="sidebarToggle">
-					  <i class="fas fa-filter"></i> Filtra
-					</button>
-			  </div>
-		  </nav>
-		</div>
-
-		<div class="col-lg-10">
-			<div class="container" id="filtri"></div>
-		</div>
-
-	  <div class="sidebar">
-			<div class="sidebar-header">
-			  <h3>Filtra per</h3>
-			  <button type="button" class="btn btn-secondary" id="sidebarClose">
-				<i class="fas fa-times"></i>
-			  </button>
-			</div>
-			<div class="sidebar-content">
-				<div id="accordion">
-					<div class="card">
-					  <div class="card-header" id="headingOne">
-						<h5 class="mb-0">
-						  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							Tempo
+		<div class="row">
+			<div class="col-lg-10">
+			  <nav class="navbar navbar-expand-lg" style="padding: .5rem 0">
+				  <h3><span id="ricetteCount"></span> RICETTE</h3>
+				  <div class="btn-group ml-auto">
+						<div class="dropdown" style="margin-right:1rem">
+						  <button class="btn btn-outline-secondary my-2 my-sm-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ordina per
 						  </button>
-						</h5>
-					  </div>
-
-					  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-						<div class="card-body">
-						  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">Prezzo crescente</a>
+							<a class="dropdown-item" href="#">Prezzo decrescente</a>
+							<a class="dropdown-item" href="#">Nome A-Z</a>
+							<a class="dropdown-item" href="#">Nome Z-A</a>
+						  </div>
 						</div>
-					  </div>
-					</div>
 
-					<div class="card">
-					  <div class="card-header" id="headingTwo">
-						<h5 class="mb-0">
-						  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-							Difficoltà
-						  </button>
-						</h5>
-					  </div>
-					  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-						<div class="card-body">
-						  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-						</div>
-					  </div>
-					</div>
-
-					<div class="card">
-					  <div class="card-header" id="headingThree">
-						<h5 class="mb-0">
-						  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							Tags
-						  </button>
-						</h5>
-					  </div>
-
-					  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-							<div class="card-body">
-								<div class="form-check" id="tags-filter">
-									<!--<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-									<label class="form-check-label" for="defaultCheck1">Default checkbox</label>-->
-								</div>
-							</div>
-					  </div>
-					</div>
-
-				</div>
+						<button class="btn btn-outline-secondary my-2 my-sm-0" id="sidebarToggle">
+						  <i class="fas fa-filter"></i> Filtra
+						</button>
+				  </div>
+			  </nav>
 			</div>
-	  </div>
+
+			<div class="col-lg-10">
+				<div id="filtri"></div>
+			</div>
+
+	  	<div id="sidebar" class="sidebar"></div>
+
+			<div id="results" class="col-lg-10"></div>
+    	<div id="pagination" class="col-lg-10"></div>
+		</div>
 	</div>
-
-  <div class="container">
-		<div id="results" class="col-lg-10"></div>
-    <div id="pagination" style="text-align: center; margin-top:2rem;"></div>
-  </div>
-
-	<br><br><br><br>
 
   <div id="footer"></div>
 
