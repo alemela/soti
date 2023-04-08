@@ -2,7 +2,6 @@
     "versioneSchema": "1.0.0",
     "dataInserimento": "2023-04-01",
     "dataUltimoAggiornamento": "2023-04-01",
-    "imageUrl": "https://cataas.com/cat",
     "identificativo": "penne-porri-salciccia",
     "portata": "Primo piatto",
     "cucina": "Italiana",
@@ -57,7 +56,7 @@
             "nome": "olio evo",
             "quantità": null,
             "unità": "q.b."
-        }      
+        }
     ],
     "preparazione": [
         "Tagliare nemente il porro, sbriciolare la salciccia in un piatto e mettere sul fuoco una pentola d'acqua salata.",
