@@ -1,6 +1,14 @@
-#navbar>nav {
+#navbar {
   background-color: #fff !important;
   border-bottom: 1px solid;
+}
+
+#main-navbar {
+  background-color: #fff !important;
+}
+
+.navbar {
+  padding: .5rem 0;
 }
 
 body {
@@ -42,14 +50,15 @@ footer {
 }
 
 @media (min-width: 992px) {
-  #navbar>nav {
+  #navbar {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
+    height: auto;
   }
 
   body {
-    padding-top: 3rem;
+    margin-top: 5rem;
   }
 }

@@ -1,18 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <img id="main-logo" src="static/logo.png" height="38" alt="Logo" title="">
-    </a>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10">
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top sticky-top">
+        <a class="navbar-brand" href="/">
+          <img id="main-logo" src="static/logo.png" height="38" alt="Logo" title="">
+        </a>
 
-    <form class="form-inline flex-fill my-2 my-lg-0 ml-auto" onsubmit="event.preventDefault(); wannaSearch(event.target[0].value)">
-      <div class="input-group flex-fill">
-        <input id="main-input" class="form-control flex-fill" type="search" placeholder="" aria-label="">
-        <div class="input-group-append">
-          <button class="btn btn-outline-danger" type="submit"><i class="fa fa-search"></i></button>
-        </div>
-      </div>
-    </form>
+        <form class="form-inline flex-fill my-2 my-lg-0 ml-auto" onsubmit="event.preventDefault(); wannaSearch(event.target[0].value)">
+          <div class="input-group flex-fill">
+            <input id="main-input" class="form-control flex-fill" type="search" placeholder="" aria-label="">
+            <div class="input-group-append">
+              <button class="btn btn-outline-danger" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </nav>
+    </div>
   </div>
-</nav>
+</div>
 
 <script type="text/javascript" src="./js/navbar.js"></script>
