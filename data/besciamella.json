@@ -1,61 +1,59 @@
 {
-    "versioneSchema": "1.0.0",
-    "dataInserimento": "2023-04-01",
-    "dataUltimoAggiornamento": "2023-04-01",
-    "imageUrl": "https://cataas.com/cat",
-    "identificativo": "besciamella",
-    "portata": "Salsa, crema e condimenti",
-    "cucina": "Italiana",
-    "cottura": "Cotto",
-    "difficoltà": 2,
-    "tag": ["classico", "crema", "latticini"],
-    "titolo": "Besciamella",
-    "sottotitolo": "Nella versione semplificata, senza roux",
-    "numeroPorzioni": 2,
-    "tempi": [
-        {
-            "nome": "Preparazione",
-            "minuti": 5
-        },
-        {
-            "nome": "Cottura",
-            "minuti": 20
-        },
-        {
-            "nome": "Totale",
-            "minuti": 25
-        }
-    ],
-    "ingredienti": [
-        {
-            "sezione": "main",
-            "nome": "farina",
-            "quantità": 20.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "burro",
-            "quantità": 25.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "latte",
-            "quantità": 300.0,
-            "unità": "ml"
-        },
-        {   "sezione": "main",
-            "nome": "noce moscata",
-            "quantità": null,
-            "unità": "q.b."
-        }  
-    ],
-    "preparazione": [
-        "Preparare una pastella di farina e acqua fredda (con acqua calda si formano i grumi!), di densità media: non troppo liquida, non troppo dura (non deve scrivere).",
-        "Nel frattempo mettere sul fuoco tutto il latte e il burro, e aggiungere il sale e la noce moscata.",
-        "Quando il burro è sciolto e il latte sta bollendo aggiungere la pastella di farina.",
-        "Continuare a cuocere e girare il composto no a che non raggiunge la consistenza desiderata."
-    ],
-    "note": "Si consiglia di fare attenzione durante la cottura e di girare molto spesso il composto, preferibilmente con una frusta, perché tende ad attaccarsi molto facilmente.",
-    "fonte": "Pietro De Felice",
-    "autore": "Sofina"
+  "versioneSchema": "1.0.0",
+  "dataInserimento": "2023-04-01",
+  "dataUltimoAggiornamento": "2023-04-01",
+  "imageUrl": "https://cataas.com/cat",
+  "identificativo": "besciamella",
+  "portata": "Salsa, crema e condimenti",
+  "cucina": "Italiana",
+  "cottura": "Cotto",
+  "difficoltà": 2,
+  "tag": [
+    "classico",
+    "crema",
+    "latticini"
+  ],
+  "titolo": "Besciamella",
+  "sottotitolo": "Nella versione semplificata, senza roux",
+  "numeroPorzioni": 2,
+  "tempi": {
+    "Preparazione": 5,
+    "Cottura": 20,
+    "Totale": 25
+  },
+  "ingredienti": [
+    {
+      "sezione": "main",
+      "nome": "farina",
+      "quantità": 20,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "burro",
+      "quantità": 25,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "latte",
+      "quantità": 300,
+      "unità": "ml"
+    },
+    {
+      "sezione": "main",
+      "nome": "noce moscata",
+      "quantità": null,
+      "unità": "q.b."
+    }
+  ],
+  "preparazione": [
+    "Preparare una pastella di farina e acqua fredda (con acqua calda si formano i grumi!), di densità media: non troppo liquida, non troppo dura (non deve scrivere).",
+    "Nel frattempo mettere sul fuoco tutto il latte e il burro, e aggiungere il sale e la noce moscata.",
+    "Quando il burro è sciolto e il latte sta bollendo aggiungere la pastella di farina.",
+    "Continuare a cuocere e girare il composto no a che non raggiunge la consistenza desiderata."
+  ],
+  "note": "Si consiglia di fare attenzione durante la cottura e di girare molto spesso il composto, preferibilmente con una frusta, perché tende ad attaccarsi molto facilmente.",
+  "fonte": "Pietro De Felice",
+  "autore": "Sofina"
 }

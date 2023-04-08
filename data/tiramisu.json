@@ -1,85 +1,91 @@
 {
-    "versioneSchema": "1.0.0",
-    "dataInserimento": "2023-04-01",
-    "dataUltimoAggiornamento": "2023-04-01",
-    "imageUrl": "https://cataas.com/cat",
-    "identificativo": "tiramisu",
-    "portata": "Dessert",
-    "cucina": "Italiana",
-    "cottura": "Senza cottura",
-    "difficoltà": 2,
-    "tag": ["dolce", "vegetariano", "classico", "primavera", "latticini", "torta", "alcol"],
-    "titolo": "Tiramisù",
-    "sottotitolo": "In una versione onesta ma light",
-    "numeroPorzioni": 4,
-    "tempi": [
-        {
-            "nome": "Preparazione",
-            "minuti": 50
-        },
-        {
-            "nome": "Attesa",
-            "minuti": 120
-        },
-        {
-            "nome": "Totale",
-            "minuti": 170
-        }
-    ],
-    "ingredienti": [
-        {
-            "sezione": "main",
-            "nome": "pavesini",
-            "quantità": 200.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "ricotta",
-            "quantità": 300.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "zucchero",
-            "quantità": 150.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "uova",
-            "quantità": 3.0,
-            "unità": "unità"
-        },
-        {   "sezione": "main",
-            "nome": "caffè",
-            "quantità": null,
-            "unità": "q.b."
-        },
-        {   "sezione": "main",
-            "nome": "cacao amaro",
-            "quantità": null,
-            "unità": "q.b."
-        },
-        {   "sezione": "main",
-            "nome": "cioccolato fondente",
-            "quantità": null,
-            "unità": "q.b."
-        },
-        {   "sezione": "main",
-            "nome": "Marsala",
-            "quantità": 1.0,
-            "unità": "bicchierino"
-        }
-    ],
-    "preparazione": [
-        "Preparare una moka da 3-4 persone di caffè.",
-        "Mettere in una terrina capiente i tuorli, il mascarpone e lo zucchero e lavorare il tutto no a renderlo una crema omogenea e senza grumi.",
-        "Quando il caffè è pronto, metterlo in un piatto fondo, stemperarlo con un po' di acqua tiepida e zuccherarlo se piace. Per dare un po' di profumo in più si può aggiungere poche gocce di aroma al rum per dolci o un bicchierino di rum o Marsala, oppure una spolverata di cannella.",
-        "Quando si ha tutto pronto, montare a neve ferma gli albumi in una ciotola abbastanza grande. Incorporarli delicatamente al resto della crema precedentemente fatta, con un movimento dal basso verso l'alto cercando di perdere il meno possibile l'aria che hanno incorporato gli albumi (dovrebbe venire una crema soffice).",
-        "Prendere un contenitore capiente preferibilmente largo e basso e dal fondo piatto, e fare un primo strato di savoiardi inzuppati di caè (non devono bere troppo caffè, basta immergerli e tirarli fuori quasi immediatamente, altrimenti si possono sfare) lasciando che sgocciolino un po' di caè prima di tirarli fuori.",
-        "Dopo quello di biscotti, stendere uno strato di crema omogeneo; se piace, grattugiare del cioccolato fondente.",
-        "Fare altri strati alternati di biscotti e crema, no ad esaurire la crema, avendo per ultimo uno strato di crema un po' più spesso. Spolverare del cacao amaro sulla superce del dolce e/o grattugiare altro cioccolato fondente.",
-        "Il dolce ha bisogno di riposare in frigo almeno 2-3 ore prima di essere mangiato; usare una pellicola per proteggere la supercie. Dopo una notte in frigo è anche più buono."
-    ],
-    "note": "È un dolce perfetto come dessert di un buon pasto, ma anche come colazione sostanziosa al mattino. <br>Ricordarsi di rimetterlo in frigo il più velocemente possibile dopo averne presa una porzione, si rovina facilmente con gli sbalzi di temperatura. Da mangiare non oltre quattro giorni dopo la preparazione, meglio se entro due (la presenza di uova non cotte rende la vita media di questo dolce decisamente corta). <br> Ne esistono tante versione, certe così diverse che ci si chiede dove arrivi il coraggio per continuare a chiamarlo Tiramisù. <br>Ad ogni modo questa è una versione <i>light</i> perché usa la ricotta al posto del mascarpone, e i pavesini al posto dei savoiardi. <br>Sempre parlando di alternative, al posto del Marsala, va benissimo sia l'aroma al rum per dolci, la cannella, o un bicchierino vero e proprio di rum.",
-    "fonte": "Babbo",
-    "autore": "Sofina"
+  "versioneSchema": "1.0.0",
+  "dataInserimento": "2023-04-01",
+  "dataUltimoAggiornamento": "2023-04-01",
+  "imageUrl": "https://cataas.com/cat",
+  "identificativo": "tiramisu",
+  "portata": "Dessert",
+  "cucina": "Italiana",
+  "cottura": "Senza cottura",
+  "difficoltà": 2,
+  "tag": [
+    "dolce",
+    "vegetariano",
+    "classico",
+    "primavera",
+    "latticini",
+    "torta",
+    "alcol"
+  ],
+  "titolo": "Tiramisù",
+  "sottotitolo": "In una versione onesta ma light",
+  "numeroPorzioni": 4,
+  "tempi": {
+    "Preparazione": 50,
+    "Attesa": 120,
+    "Totale": 170
+  },
+  "ingredienti": [
+    {
+      "sezione": "main",
+      "nome": "pavesini",
+      "quantità": 200,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "ricotta",
+      "quantità": 300,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "zucchero",
+      "quantità": 150,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "uova",
+      "quantità": 3,
+      "unità": "unità"
+    },
+    {
+      "sezione": "main",
+      "nome": "caffè",
+      "quantità": null,
+      "unità": "q.b."
+    },
+    {
+      "sezione": "main",
+      "nome": "cacao amaro",
+      "quantità": null,
+      "unità": "q.b."
+    },
+    {
+      "sezione": "main",
+      "nome": "cioccolato fondente",
+      "quantità": null,
+      "unità": "q.b."
+    },
+    {
+      "sezione": "main",
+      "nome": "Marsala",
+      "quantità": 1,
+      "unità": "bicchierino"
+    }
+  ],
+  "preparazione": [
+    "Preparare una moka da 3-4 persone di caffè.",
+    "Mettere in una terrina capiente i tuorli, il mascarpone e lo zucchero e lavorare il tutto no a renderlo una crema omogenea e senza grumi.",
+    "Quando il caffè è pronto, metterlo in un piatto fondo, stemperarlo con un po' di acqua tiepida e zuccherarlo se piace. Per dare un po' di profumo in più si può aggiungere poche gocce di aroma al rum per dolci o un bicchierino di rum o Marsala, oppure una spolverata di cannella.",
+    "Quando si ha tutto pronto, montare a neve ferma gli albumi in una ciotola abbastanza grande. Incorporarli delicatamente al resto della crema precedentemente fatta, con un movimento dal basso verso l'alto cercando di perdere il meno possibile l'aria che hanno incorporato gli albumi (dovrebbe venire una crema soffice).",
+    "Prendere un contenitore capiente preferibilmente largo e basso e dal fondo piatto, e fare un primo strato di savoiardi inzuppati di caè (non devono bere troppo caffè, basta immergerli e tirarli fuori quasi immediatamente, altrimenti si possono sfare) lasciando che sgocciolino un po' di caè prima di tirarli fuori.",
+    "Dopo quello di biscotti, stendere uno strato di crema omogeneo; se piace, grattugiare del cioccolato fondente.",
+    "Fare altri strati alternati di biscotti e crema, no ad esaurire la crema, avendo per ultimo uno strato di crema un po' più spesso. Spolverare del cacao amaro sulla superce del dolce e/o grattugiare altro cioccolato fondente.",
+    "Il dolce ha bisogno di riposare in frigo almeno 2-3 ore prima di essere mangiato; usare una pellicola per proteggere la supercie. Dopo una notte in frigo è anche più buono."
+  ],
+  "note": "È un dolce perfetto come dessert di un buon pasto, ma anche come colazione sostanziosa al mattino. <br>Ricordarsi di rimetterlo in frigo il più velocemente possibile dopo averne presa una porzione, si rovina facilmente con gli sbalzi di temperatura. Da mangiare non oltre quattro giorni dopo la preparazione, meglio se entro due (la presenza di uova non cotte rende la vita media di questo dolce decisamente corta). <br> Ne esistono tante versione, certe così diverse che ci si chiede dove arrivi il coraggio per continuare a chiamarlo Tiramisù. <br>Ad ogni modo questa è una versione <i>light</i> perché usa la ricotta al posto del mascarpone, e i pavesini al posto dei savoiardi. <br>Sempre parlando di alternative, al posto del Marsala, va benissimo sia l'aroma al rum per dolci, la cannella, o un bicchierino vero e proprio di rum.",
+  "fonte": "Babbo",
+  "autore": "Sofina"
 }

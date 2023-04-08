@@ -1,72 +1,74 @@
 {
-    "versioneSchema": "1.0.0",
-    "dataInserimento": "2023-04-01",
-    "dataUltimoAggiornamento": "2023-04-01",
-    "identificativo": "penne-porri-salciccia",
-    "portata": "Primo piatto",
-    "cucina": "Italiana",
-    "cottura": "Cotto",
-    "difficoltà": 2,
-    "tag": ["umami", "gustoso", "year-round", "carne", "pranzo"],
-    "titolo": "Penne alla panna con porri e salciccia",
-    "sottotitolo": "Una pasta gagliarda",
-    "numeroPorzioni": 2,
-    "tempi": [
-        {
-            "nome": "Preparazione",
-            "minuti": 10
-        },
-        {
-            "nome": "Cottura",
-            "minuti": 25
-        },
-        {
-            "nome": "Totale",
-            "minuti": 35
-        }
-    ],
-    "ingredienti": [
-        {
-            "sezione": "main",
-            "nome": "salciccia",
-            "quantità": 150.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "porro di medie dimensioni",
-            "quantità": 1.0,
-            "unità": "unità"
-        },
-        {   "sezione": "main",
-            "nome": "panna da cucina",
-            "quantità": 200.0,
-            "unità": "ml"
-        },
-        {   "sezione": "main",
-            "nome": "pasta corta",
-            "quantità": 180.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "vino bianco",
-            "quantità": 0.3,
-            "unità": "bicchieri"
-        },
-        {   "sezione": "main",
-            "nome": "olio evo",
-            "quantità": null,
-            "unità": "q.b."
-        }
-    ],
-    "preparazione": [
-        "Tagliare nemente il porro, sbriciolare la salciccia in un piatto e mettere sul fuoco una pentola d'acqua salata.",
-        "Far appassire il porro in una padella con un poco d'olio a fuoco medio-basso (fare attenzione, il porro è delicato e si brucia facilmente).",
-        "Quando il porro è quasi pronto, aggiungere la salciccia in padella e dopo poco buttare la pasta.",
-        "Una volta che la salciccia è ben rosolata aggiungere il vino bianco e lasciarlo sfumare (continuare finché si sente un odore alcolico).",
-        "Due minuti prima che la pasta sia pronta, aggiungere la panna al condimento e lasciarla rapprendere a fuoco basso.",
-        "Buttare la pasta in padella e amalgamare per insaporire."
-    ],
-    "note": null,
-    "fonte": "La strada",
-    "autore": "Sofina"
+  "versioneSchema": "1.0.0",
+  "dataInserimento": "2023-04-01",
+  "dataUltimoAggiornamento": "2023-04-01",
+  "identificativo": "penne-porri-salciccia",
+  "portata": "Primo piatto",
+  "cucina": "Italiana",
+  "cottura": "Cotto",
+  "difficoltà": 2,
+  "tag": [
+    "umami",
+    "gustoso",
+    "year-round",
+    "carne",
+    "pranzo"
+  ],
+  "titolo": "Penne alla panna con porri e salciccia",
+  "sottotitolo": "Una pasta gagliarda",
+  "numeroPorzioni": 2,
+  "tempi": {
+    "Preparazione": 10,
+    "Cottura": 25,
+    "Totale": 35
+  },
+  "ingredienti": [
+    {
+      "sezione": "main",
+      "nome": "salciccia",
+      "quantità": 150,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "porro di medie dimensioni",
+      "quantità": 1,
+      "unità": "unità"
+    },
+    {
+      "sezione": "main",
+      "nome": "panna da cucina",
+      "quantità": 200,
+      "unità": "ml"
+    },
+    {
+      "sezione": "main",
+      "nome": "pasta corta",
+      "quantità": 180,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "vino bianco",
+      "quantità": 0.3,
+      "unità": "bicchieri"
+    },
+    {
+      "sezione": "main",
+      "nome": "olio evo",
+      "quantità": null,
+      "unità": "q.b."
+    }
+  ],
+  "preparazione": [
+    "Tagliare nemente il porro, sbriciolare la salciccia in un piatto e mettere sul fuoco una pentola d'acqua salata.",
+    "Far appassire il porro in una padella con un poco d'olio a fuoco medio-basso (fare attenzione, il porro è delicato e si brucia facilmente).",
+    "Quando il porro è quasi pronto, aggiungere la salciccia in padella e dopo poco buttare la pasta.",
+    "Una volta che la salciccia è ben rosolata aggiungere il vino bianco e lasciarlo sfumare (continuare finché si sente un odore alcolico).",
+    "Due minuti prima che la pasta sia pronta, aggiungere la panna al condimento e lasciarla rapprendere a fuoco basso.",
+    "Buttare la pasta in padella e amalgamare per insaporire."
+  ],
+  "note": null,
+  "fonte": "La strada",
+  "autore": "Sofina"
 }

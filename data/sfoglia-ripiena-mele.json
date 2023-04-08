@@ -1,75 +1,79 @@
 {
-    "versioneSchema": "1.0.0",
-    "dataInserimento": "2023-04-01",
-    "dataUltimoAggiornamento": "2023-04-01",
-    "imageUrl": "https://cataas.com/cat",
-    "identificativo": "sfoglia-ripiena-mele",
-    "portata": "Dessert",
-    "cucina": "Italiana",
-    "cottura": "Al forno",
-    "difficoltà": 2,
-    "tag": ["dolce", "vegetariano", "year-round", "frutta", "colazione", "snack", "torta"],
-    "titolo": "Sfoglia ripiena di mele",
-    "sottotitolo": null,
-    "numeroPorzioni": 4,
-    "tempi": [
-        {
-            "nome": "Preparazione",
-            "minuti": 15
-        },
-        {
-            "nome": "Cottura",
-            "minuti": 50
-        },
-        {
-            "nome": "Totale",
-            "minuti": 65
-        }
-    ],
-    "ingredienti": [
-        {
-            "sezione": "main",
-            "nome": "mele",
-            "quantità": 1.0,
-            "unità": "kg"
-        },
-        {   "sezione": "main",
-            "nome": "zucchero",
-            "quantità": 250.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "cannella",
-            "quantità": null,
-            "unità": "q.b."
-        },
-        {   "sezione": "main",
-            "nome": "sfoglie brisè",
-            "quantità": 2.0,
-            "unità": "unità"
-        },
-        {   "sezione": "main",
-            "nome": "biscotti duri",
-            "quantità": 6.0,
-            "unità": "unità"
-        },
-        {   "sezione": "main",
-            "nome": "burro",
-            "quantità": null,
-            "unità": "q.b."
-        }
-    ],
-    "preparazione": [
-        "Sbucciare e tagliare le mele a pezzetti.",
-        "In un ciotolo mescolare bene ∼ 200 g di zucchero indicativamente tutto lo zucchero meno due cucchiai) e le mele; aggiungere un pizzico di cannella.",
-        "Mettere la sfoglia di pasta brisè in una teglia con il suo foglio di carta da forno sotto, facendo in modo che i bordi della pasta non ricadano su sé stessa.",
-        "Bucherellare con una forchetta il fondo della sfoglia e sbriciolarvi i biscotti distribuendoli ovunque.",
-        "Mettere le mele condite nella teglia e livellare bene. Fiocchettare del burro e spolverare lo zucchero rimanente sulle mele.",
-        "Coprire e sigillare bene con una seconda sfoglia brisè.",
-        "Infornare la teglia coperta con un foglio di alluminio in forno preriscaldato a 180° per 20'.", 
-        "Togliere poi il foglio d'alluminio e lasciar cuocere per altri 30 minuti no a che la sfoglia sopra non è ben scurita e indurita."
-    ],
-    "note": "Lasciar ben rareddare quando sfornata!",
-    "fonte": "Babbo",
-    "autore": "Sofina"
+  "versioneSchema": "1.0.0",
+  "dataInserimento": "2023-04-01",
+  "dataUltimoAggiornamento": "2023-04-01",
+  "imageUrl": "https://cataas.com/cat",
+  "identificativo": "sfoglia-ripiena-mele",
+  "portata": "Dessert",
+  "cucina": "Italiana",
+  "cottura": "Al forno",
+  "difficoltà": 2,
+  "tag": [
+    "dolce",
+    "vegetariano",
+    "year-round",
+    "frutta",
+    "colazione",
+    "snack",
+    "torta"
+  ],
+  "titolo": "Sfoglia ripiena di mele",
+  "sottotitolo": null,
+  "numeroPorzioni": 4,
+  "tempi": {
+    "Preparazione": 15,
+    "Cottura": 50,
+    "Totale": 65
+  },
+  "ingredienti": [
+    {
+      "sezione": "main",
+      "nome": "mele",
+      "quantità": 1,
+      "unità": "kg"
+    },
+    {
+      "sezione": "main",
+      "nome": "zucchero",
+      "quantità": 250,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "cannella",
+      "quantità": null,
+      "unità": "q.b."
+    },
+    {
+      "sezione": "main",
+      "nome": "sfoglie brisè",
+      "quantità": 2,
+      "unità": "unità"
+    },
+    {
+      "sezione": "main",
+      "nome": "biscotti duri",
+      "quantità": 6,
+      "unità": "unità"
+    },
+    {
+      "sezione": "main",
+      "nome": "burro",
+      "quantità": null,
+      "unità": "q.b."
+    }
+  ],
+  "preparazione": [
+    "Sbucciare e tagliare le mele a pezzetti.",
+    "In un ciotolo mescolare bene ∼ 200 g di zucchero indicativamente tutto lo zucchero meno due cucchiai) e le mele; aggiungere un pizzico di cannella.",
+    "Mettere la sfoglia di pasta brisè in una teglia con il suo foglio di carta da forno sotto, facendo in modo che i bordi della pasta non ricadano su sé stessa.",
+    "Bucherellare con una forchetta il fondo della sfoglia e sbriciolarvi i biscotti distribuendoli ovunque.",
+    "Mettere le mele condite nella teglia e livellare bene. Fiocchettare del burro e spolverare lo zucchero rimanente sulle mele.",
+    "Coprire e sigillare bene con una seconda sfoglia brisè.",
+    "Infornare la teglia coperta con un foglio di alluminio in forno preriscaldato a 180° per 20'.",
+    "Togliere poi il foglio d'alluminio e lasciar cuocere per altri 30 minuti no a che la sfoglia sopra non è ben scurita e indurita."
+  ],
+  "note": "Lasciar ben rareddare quando sfornata!",
+  "fonte": "Babbo",
+  "autore": "Sofina"
 }

@@ -1,63 +1,66 @@
 {
-    "versioneSchema": "1.0.0",
-    "dataInserimento": "2023-04-01",
-    "dataUltimoAggiornamento": "2023-04-01",
-    "imageUrl": "https://cataas.com/cat",
-    "identificativo": "zazichi",
-    "portata": "Salsa, crema e condimenti",
-    "cucina": "Greca",
-    "cottura": "Senza cottura",
-    "difficoltà": 1,
-    "tag": ["vegetariano", "crema", "latticini", "fresco"],
-    "titolo": "Zazichi",
-    "sottotitolo": "<i>Tzatziki</i> per le persone serie",
-    "numeroPorzioni": 2,
-    "tempi": [
-        {
-            "nome": "Preparazione",
-            "minuti": 7
-        },
-        {
-            "nome": "Totale",
-            "minuti": 7
-        }
-    ],
-    "ingredienti": [
-        {
-            "sezione": "main",
-            "nome": "yogurt greco",
-            "quantità": 150.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "cetriolo",
-            "quantità": 1.0,
-            "unità": "unità"
-        },
-        {   "sezione": "main",
-            "nome": "spicchio d'aglio",
-            "quantità": 0.5,
-            "unità": "unità"
-        },
-        {   "sezione": "main",
-            "nome": "succo di limone",
-            "quantità": 2.0,
-            "unità": "cucchiai"
-        },
-        {   "sezione": "main",
-            "nome": "olio evo",
-            "quantità": 4,
-            "unità": "cucchiai"
-        }   
-    ],
-    "preparazione": [
-        "Lavare, sbucciare e grattugiare grossolanamente il cetriolo.",
-        "Prendere la polpa così ottenuta e strizzarla nelle mani con forza per far fuoriuscire la maggior parte dell'acqua che contiene.",
-        "Tagliare molto nemente mezzo spicchio d'aglio.",
-        "Svuotare il vasetto di yogurt in un piatto, univirvi l'olio, l'aceto, del sale q.b. e mescolare bene per incorporare l'olio.",
-        "Aggiungere la polpa di cetriolo strizzata e l'aglio tritato e mescolare ancora."
-    ],
-    "note": "La versione che credo essere quella originale utilizza il cetriolo con tutta la buccia. <br> Questa versione usa tutto sommato poco yogurt, se piace una Zazichi più cremosa si può mettere il doppio dello yogurt. <br> Per profumare e condire ulteriormente questa crema adatta per accompagnare le pietanze più disparate (pomodori, pesce, crostini, carne, insalate di riso ecc.) si può aggiungere l'aneto.",
-    "fonte": "Babbo e dei greci da qualche parte",
-    "autore": "Sofina"
+  "versioneSchema": "1.0.0",
+  "dataInserimento": "2023-04-01",
+  "dataUltimoAggiornamento": "2023-04-01",
+  "imageUrl": "https://cataas.com/cat",
+  "identificativo": "zazichi",
+  "portata": "Salsa, crema e condimenti",
+  "cucina": "Greca",
+  "cottura": "Senza cottura",
+  "difficoltà": 1,
+  "tag": [
+    "vegetariano",
+    "crema",
+    "latticini",
+    "fresco"
+  ],
+  "titolo": "Zazichi",
+  "sottotitolo": "<i>Tzatziki</i> per le persone serie",
+  "numeroPorzioni": 2,
+  "tempi": {
+    "Preparazione": 7,
+    "Totale": 7
+  },
+  "ingredienti": [
+    {
+      "sezione": "main",
+      "nome": "yogurt greco",
+      "quantità": 150,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "cetriolo",
+      "quantità": 1,
+      "unità": "unità"
+    },
+    {
+      "sezione": "main",
+      "nome": "spicchio d'aglio",
+      "quantità": 0.5,
+      "unità": "unità"
+    },
+    {
+      "sezione": "main",
+      "nome": "succo di limone",
+      "quantità": 2,
+      "unità": "cucchiai"
+    },
+    {
+      "sezione": "main",
+      "nome": "olio evo",
+      "quantità": 4,
+      "unità": "cucchiai"
+    }
+  ],
+  "preparazione": [
+    "Lavare, sbucciare e grattugiare grossolanamente il cetriolo.",
+    "Prendere la polpa così ottenuta e strizzarla nelle mani con forza per far fuoriuscire la maggior parte dell'acqua che contiene.",
+    "Tagliare molto nemente mezzo spicchio d'aglio.",
+    "Svuotare il vasetto di yogurt in un piatto, univirvi l'olio, l'aceto, del sale q.b. e mescolare bene per incorporare l'olio.",
+    "Aggiungere la polpa di cetriolo strizzata e l'aglio tritato e mescolare ancora."
+  ],
+  "note": "La versione che credo essere quella originale utilizza il cetriolo con tutta la buccia. <br> Questa versione usa tutto sommato poco yogurt, se piace una Zazichi più cremosa si può mettere il doppio dello yogurt. <br> Per profumare e condire ulteriormente questa crema adatta per accompagnare le pietanze più disparate (pomodori, pesce, crostini, carne, insalate di riso ecc.) si può aggiungere l'aneto.",
+  "fonte": "Babbo e dei greci da qualche parte",
+  "autore": "Sofina"
 }

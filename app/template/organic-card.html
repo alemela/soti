@@ -8,14 +8,14 @@
   <div class="card">
     <div class="row no-gutters">
       <div class="col-md-4 d-flex align-items-center">
-        <img src="{{#imageUrl}}{{imageUrl}}{{/imageUrl}}{{^imageUrl}}/images/{{identificativo}}.png{{/imageUrl}}" class="card-img img-fluid" alt="{{identificativo}}" style="object-fit: cover; max-height: 200px;">
+        <img src="{{#imageUrl}}{{.}}{{/imageUrl}}{{^imageUrl}}/images/{{identificativo}}.png{{/imageUrl}}" class="card-img img-fluid" alt="{{identificativo}}" style="object-fit: cover; max-height: 200px;">
       </div>
       <div class="col-md-8">
         <div class="card-body" style="padding: 0.5rem 1.25rem">
           <small class="text-muted">{{{portata}}}</small>
           <h3 class="card-title"><a href="/page?id={{identificativo}}">{{{titolo}}}</a></h3>
-          {{#sottotitolo}}<p class="card-text">{{{sottotitolo}}} <br>{{/sottotitolo}}
-          <small class="text-muted">{{difficoltà_stringa}} · {{tempo}} minuti</small></p>
+          {{#with sottotitolo}}<p class="card-text">{{{.}}} <br>{{/with}}
+          <small class="text-muted">{{difficoltà_stringa}} · {{tempi.Totale}} minuti</small></p>
           {{#tag}}<a href="#" class="badge badge-secondary badge-outlined">{{{.}}}</a>&nbsp;{{/tag}}<br>
         </div>
       </div>

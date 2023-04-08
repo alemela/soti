@@ -17,19 +17,19 @@ fetch("/api/get?id=" + PAGE_ID, {
   let navbarTemplate, contenutoTemplate, footerTemplate;
   $.when(
     $.get('../template/navbar.html', function(data) {
-      navbarTemplate = data;
+      navbarTemplate = Handlebars.compile(data);
     }),
     $.get('../template/page.html', function(data) {
-      contenutoTemplate = data;
+      contenutoTemplate = Handlebars.compile(data);
     }),
     $.get('../template/footer.html', function(data) {
-      footerTemplate = data;
+      footerTemplate = Handlebars.compile(data);
     })
   ).then(function() {
     // Compila i template con i dati desiderati
-    const navbar = Mustache.render(navbarTemplate, {});
-    const template = Mustache.render(contenutoTemplate, data);
-    const footer = Mustache.render(footerTemplate, {});
+    const navbar = navbarTemplate({});
+    const template = contenutoTemplate(data);
+    const footer = footerTemplate({});
 
     // Inserisci i template compilati nei contenitori appropriati
     $('#navbar').html(navbar);

@@ -20,14 +20,14 @@ const search = function (q) {
       let navbarTemplate, contenutoTemplate, footerTemplate;
       $.when(
         $.get('../template/navbar.html', function(data) {
-          navbarTemplate = data;
+          navbarTemplate = Handlebars.compile(data);;
         }),
         $.get('../template/footer.html', function(data) {
-          footerTemplate = data;
+          footerTemplate = Handlebars.compile(data);;
         })
       ).then(function() {
-        const navbar = Mustache.render(navbarTemplate, {});
-        const footer = Mustache.render(footerTemplate, {});
+        const navbar = navbarTemplate({});
+        const footer = footerTemplate({});
 
         $('#navbar').html(navbar);
         $('#footer').html(footer);
@@ -101,11 +101,7 @@ const renderCard = function (data) {
     xhr.open('GET', 'template/organic-card.html', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            let template = xhr.responseText;
-
-            data.tempo = data.tempi.filter(obj => {
-                return obj.nome === "Totale"
-            })[0].minuti;
+            const template = xhr.responseText;
 
             data.difficoltà_stringa = "Difficoltà ignota";
             switch (data.difficoltà) {
@@ -128,11 +124,8 @@ const renderCard = function (data) {
                     break;
             }
 
-            // Rendering del template Mustache con i dati JSON
-            let rendered = Mustache.render(template, data);
-
-            // Iniezione del template nella pagina HTML
-            document.getElementById('results').innerHTML += rendered;
+            const render = Handlebars.compile(template);
+            document.getElementById('results').innerHTML += render(data);
         }
     };
     xhr.send();

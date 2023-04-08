@@ -37,5 +37,6 @@ Ulteriori cambiamenti sono possibili ma non garantiscono la compatibilità con f
 - ordina per da finire
 - check mobile (barra in alto soprattutto)
 - fare in modo che Sofi possa sviluppare dosi dinamiche senza introiare Soti
+- rendere facile fare i cambiamenti senza incasinarsi con git (e.g. immagini di esempio vs quelle vere)
 - sidebar ispirarsi a https://www.autohero.com/it/search/?sort=price_asc&yearMin=2018
 - stile ispirarsi a https://ricette.giallozafferano.it/Tiramisu.html

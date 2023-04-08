@@ -1,52 +1,52 @@
 {
-    "versioneSchema": "1.0.0",
-    "dataInserimento": "2023-04-01",
-    "dataUltimoAggiornamento": "2023-04-01",
-    "imageUrl": "https://cataas.com/cat",
-    "identificativo": "pesce-crosta-sale",
-    "portata": "Secondo piatto",
-    "cucina": "Italiana",
-    "cottura": "Al forno",
-    "difficoltà": 2,
-    "tag": ["salato", "caldo", "pesce", "cena", "leggero", "pochi-ingredienti", "celiaco"],
-    "titolo": "Pesce in crosta di sale",
-    "sottotitolo": "Branzino o orata al volo!",
-    "numeroPorzioni": 2,
-    "tempi": [
-        {
-            "nome": "Preparazione",
-            "minuti": 10
-        },
-        {
-            "nome": "Cottura",
-            "minuti": 30
-        },
-        {
-            "nome": "Totale",
-            "minuti": 40
-        }
-    ],
-    "ingredienti": [
-        {
-            "sezione": "main",
-            "nome": "branzino o orata, eviscerato",
-            "quantità": 400.0,
-            "unità": "grammi"
-        },
-        {   "sezione": "main",
-            "nome": "sale grosso",
-            "quantità": null,
-            "unità": "q.b."
-        }
-    ],
-    "preparazione": [
-        "Lavare bene sotto l'acqua il pesce e desquamarlo con cura. Tagliare le pinne (dorsali, laterali e ventrali). Asciugarlo con abbondante carta da cucina.",
-        "Preparare un grosso foglio d'alluminio su una teglia abbastanza grande da accogliere il pesce intero, e fare uno strato di sale grosso sul fondo che segua all'incirca il prolo del pesce.",
-        "Adagiare il pesce sul sale e ricoprirlo con altro sale.",
-        "Chiudere il cartoccio accuratamente in modo tale che il pesce sia isolato (eventualmente usando anche un altro foglio), ma senza eccessi di alluminio.",
-        "Mettere in forno preriscaldato a 180° per almeno una mezzora."
-    ],
-    "note": "Questa cottura molto semplice permette di assaporare la carne del pesce senza distrazioni! ... Ma può essere perfettamente accompagnata da verdure al forno o salse, qualcuno consiglia il poivre vert.",
-    "fonte": "Babbo",
-    "autore": "Sofina"
+  "versioneSchema": "1.0.0",
+  "dataInserimento": "2023-04-01",
+  "dataUltimoAggiornamento": "2023-04-01",
+  "imageUrl": "https://cataas.com/cat",
+  "identificativo": "pesce-crosta-sale",
+  "portata": "Secondo piatto",
+  "cucina": "Italiana",
+  "cottura": "Al forno",
+  "difficoltà": 2,
+  "tag": [
+    "salato",
+    "caldo",
+    "pesce",
+    "cena",
+    "leggero",
+    "pochi-ingredienti",
+    "celiaco"
+  ],
+  "titolo": "Pesce in crosta di sale",
+  "sottotitolo": "Branzino o orata al volo!",
+  "numeroPorzioni": 2,
+  "tempi": {
+    "Preparazione": 10,
+    "Cottura": 30,
+    "Totale": 40
+  },
+  "ingredienti": [
+    {
+      "sezione": "main",
+      "nome": "branzino o orata, eviscerato",
+      "quantità": 400,
+      "unità": "grammi"
+    },
+    {
+      "sezione": "main",
+      "nome": "sale grosso",
+      "quantità": null,
+      "unità": "q.b."
+    }
+  ],
+  "preparazione": [
+    "Lavare bene sotto l'acqua il pesce e desquamarlo con cura. Tagliare le pinne (dorsali, laterali e ventrali). Asciugarlo con abbondante carta da cucina.",
+    "Preparare un grosso foglio d'alluminio su una teglia abbastanza grande da accogliere il pesce intero, e fare uno strato di sale grosso sul fondo che segua all'incirca il prolo del pesce.",
+    "Adagiare il pesce sul sale e ricoprirlo con altro sale.",
+    "Chiudere il cartoccio accuratamente in modo tale che il pesce sia isolato (eventualmente usando anche un altro foglio), ma senza eccessi di alluminio.",
+    "Mettere in forno preriscaldato a 180° per almeno una mezzora."
+  ],
+  "note": "Questa cottura molto semplice permette di assaporare la carne del pesce senza distrazioni! ... Ma può essere perfettamente accompagnata da verdure al forno o salse, qualcuno consiglia il poivre vert.",
+  "fonte": "Babbo",
+  "autore": "Sofina"
 }

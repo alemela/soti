@@ -1,0 +1,76 @@
+const fs = require('fs');
+const path = require('path');
+
+const dataFolder = path.join(__dirname, 'data');
+
+fs.readdir(dataFolder, (err, files) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  files.forEach((file) => {
+    const filePath = path.join(dataFolder, file);
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      const jsonData = JSON.parse(data);
+
+      //INIZIO COSE DA CAMBIARE
+
+      if (Array.isArray(jsonData.tempi)) {
+        const tempiObj = {};
+        jsonData.tempi.forEach((tempo) => {
+          tempiObj[tempo.nome] = tempo.minuti;
+        });
+        jsonData.tempi = tempiObj;
+      }
+
+      //FINE COSE DA CAMBIARE
+
+      const newJsonData = JSON.stringify(jsonData, null, 2);
+
+      fs.writeFile(filePath, newJsonData, (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        console.log(`File ${filePath} modificato con successo.`);
+      });
+    });
+  });
+});
+
+/*
+Prompt GPT
+
+Scrivi un codice in nodejs che prende tutti i JSON dentro la cartella "data" e applica una sostituzione. Al posto di
+
+"tempi": [
+        {
+            "nome": "Preparazione",
+            "minuti": 10
+        },
+        {
+            "nome": "Cottura",
+            "minuti": 45
+        },
+        {
+            "nome": "Totale",
+            "minuti": 55
+        }
+    ]
+
+mette
+
+"tempi": {
+       "Preparazione": 10
+       "Cottura": 45
+        "Totale": 55
+        }
+*/
