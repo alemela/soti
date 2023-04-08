@@ -36,16 +36,18 @@ const search = function (q) {
         let count = document.getElementById("ricetteCount");
         count.innerHTML = data.hits.total.value;
 
-
+        //Gestione highlight
         for (i = 0; i < data.hits.hits.length; i++) {
           const hl = data.hits.hits[i].highlight;
           const source = data.hits.hits[i]._source;
-          console.log(hl)
+
+          source.hl2 = [];
           for (key in hl) {
-            source[key] = hl[key];
-            console.log(hl[key]) //TODO aggiungere un boxino sotto se non lo sono
+            if (window.env.FE_HL_1.includes(key)) source[key] = hl[key];
+            if (window.env.FE_HL_2.includes(key)) source["hl2"].push({[key]: hl[key]});
           }
 
+          console.log(source)
           renderCard(source);
         }
 
@@ -93,7 +95,6 @@ const search = function (q) {
         })
 
     })
-    .catch(error => console.error("Errore: " +  error));
 }
 
 const renderCard = function (data) {

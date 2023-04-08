@@ -1,1 +1,1 @@
-window.env = {"FE_WEBSITE_TITLE":"Sotis Ricette","FE_NAVBAR_PLACEHOLDER":"Scrivi la ricetta che vuoi cercare...","FE_FOOTER":"Made with 💓 by Sofi"};
+window.env = {"FE_WEBSITE_TITLE":"Sotis Ricette","FE_NAVBAR_PLACEHOLDER":"Scrivi la ricetta che vuoi cercare...","FE_FOOTER":"Made with 💓 by Sofi","FE_HL_1":"titolo, sottotiolo, portata, tag","FE_HL_2":"ingredienti.nome, note","FE_ORDER_BY":"titolo|Titolo|A-Z|Z-A, tempi.totale|Tempo preparazione|crescente|decrescente"};
