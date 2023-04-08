@@ -33,8 +33,9 @@ const search = function (q) {
         $('#footer').html(footer);
       });
 
-        let count = document.getElementById("ricetteCount");
-        count.innerHTML = data.hits.total.value;
+        let count = document.getElementById("resultsCount");
+        if (data.hits.total.value === 1) count.innerHTML = data.hits.total.value + " " + window.env.FE_RESULT_NAME;
+        if (data.hits.total.value !== 1) count.innerHTML = data.hits.total.value + " " + window.env.FE_RESULTS_NAME;
 
         //Gestione highlight
         for (i = 0; i < data.hits.hits.length; i++) {

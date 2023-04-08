@@ -5,14 +5,14 @@
       <h1>{{{titolo}}}</h1>
       <p class="sottotitolo">{{{sottotitolo}}}</p>
 
-      {{#tag}}<a class="badge badge-pill badge-dark text-uppercase" href="/?tags={{.}}">{{.}}</a> {{/tag}}
+      {{#tag}}<a class="badge badge-pill badge-dark text-uppercase rounded-0" href="/?tags={{.}}">{{.}}</a> {{/tag}}
 
       <br><br><br>
 
-      <div class="card shadow-lg">
+      <div class="card shadow-lg rounded-0">
         <div class="row no-gutters">
           <div class="col-md-8 d-flex align-items-center">
-            <img src="{{#imageUrl}}{{.}}{{/imageUrl}}{{^imageUrl}}/images/{{identificativo}}.png{{/imageUrl}}" class="card-img img-fluid" alt="{{identificativo}}" style="object-fit: cover; max-height: 400px;">
+            <img src="{{#imageUrl}}{{.}}{{/imageUrl}}{{^imageUrl}}/images/{{identificativo}}.png{{/imageUrl}}" class="card-img img-fluid rounded-0" alt="{{identificativo}}" style="object-fit: cover; max-height: 400px;">
           </div>
           <div class="col-md-4">
             <div class="card-body">
