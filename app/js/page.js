@@ -36,4 +36,4 @@ fetch("/api/get?id=" + PAGE_ID, {
     $('#page').html(template);
     $('#footer').html(footer);
   });
-}).catch(error => console.error(error));
+})

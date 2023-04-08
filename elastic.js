@@ -49,7 +49,7 @@ async function sendQuery(query, page, size, sort, filterClauses) {
 // Definisci una funzione che recupera un documento dall'indice "ricette" con un determinato "_id"
 exports.getDocumentById = async function (id) {
   const query = esb.matchQuery('identificativo', `${id}`);
-  return await sendQuery(query, 1, 1, []);
+  return await sendQuery(query, 1, 1, "_score-desc", []);
 }
 
 exports.getDocuments = async function (ricerca, page, size, sort, tags) { //XXX tags va generalizzato per altri filtri NON aggiungere altri parametri all'infinito
