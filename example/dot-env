@@ -1,0 +1,7 @@
+SERVER_PORT=8040
+ES_HOST="localhost:9200"
+ES_INDEX="ricette"
+ES_SEARCHABLE_KEYS="titolo, sottotitolo, portata, tag, ingredienti.nome, note"
+FE_WEBSITE_TITLE="Sotis Ricette"
+FE_NAVBAR_PLACEHOLDER="Scrivi la ricetta che vuoi cercare..."
+FE_FOOTER="Made with 💓 by Sofi"

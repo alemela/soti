@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'app')));
+app.use('/images', express.static(__dirname + '/images'));
 
 // Aggiungi il router definito nel file "router.js"
 app.use('/', router);
