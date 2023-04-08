@@ -18,8 +18,8 @@
   "sottotitolo": "<i>Tzatziki</i> per le persone serie",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 7,
-    "Totale": 7
+    "preparazione": 7,
+    "totale": 7
   },
   "ingredienti": [
     {

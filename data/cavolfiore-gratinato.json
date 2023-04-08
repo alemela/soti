@@ -24,9 +24,9 @@
   "sottotitolo": "Uno sformatino col botto",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 7,
-    "Cottura": 35,
-    "Totale": 42
+    "preparazione": 7,
+    "cottura": 35,
+    "totale": 42
   },
   "ingredienti": [
     {

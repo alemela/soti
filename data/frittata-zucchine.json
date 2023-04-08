@@ -18,9 +18,9 @@
   "sottotitolo": "Una leggera frittatina per alleviare la giornata",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 10,
-    "Cottura": 15,
-    "Totale": 25
+    "preparazione": 10,
+    "cottura": 15,
+    "totale": 25
   },
   "ingredienti": [
     {

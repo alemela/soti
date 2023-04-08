@@ -21,9 +21,9 @@
   "sottotitolo": "Un classico intramontabile dei contorni",
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 10,
-    "Cottura": 45,
-    "Totale": 55
+    "preparazione": 10,
+    "cottura": 45,
+    "totale": 55
   },
   "ingredienti": [
     {

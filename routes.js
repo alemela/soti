@@ -20,9 +20,10 @@ router.get('/api/search', async (req, res) => {
     const q = req.query.q; // Recupera il parametro "q" dalla query string
     const page = req.query.page;
     const size = req.query.size;
+    const sort = req.query.sort;
     const tags = req.query.tags ? req.query.tags.split("|") : [];
 
-    const result = await elastic.getDocuments(q, page, size, tags); // Chiama la funzione di elastic.js per recuperare il documento
+    const result = await elastic.getDocuments(q, page, size, sort, tags); // Chiama la funzione di elastic.js per recuperare il documento
     res.json(result); // Restituisci il documento come JSON
   } catch (err) {
     console.error(err);
@@ -34,11 +35,8 @@ router.get('/page', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', 'page.html'));
 });
 
-
 router.get('/search', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', 'index.html'));
 });
-
-
 
 module.exports = router;

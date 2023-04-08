@@ -21,9 +21,9 @@
   "sottotitolo": "Branzino o orata al volo!",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 10,
-    "Cottura": 30,
-    "Totale": 40
+    "preparazione": 10,
+    "cottura": 30,
+    "totale": 40
   },
   "ingredienti": [
     {

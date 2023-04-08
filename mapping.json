@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "properties": {
+      "titolo": {
+        "type": "text",
+        "analyzer": "italian",
+        "fielddata": true
+      },
+      "tempi": {
+        "type": "object",
+        "properties": {
+          "totale": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

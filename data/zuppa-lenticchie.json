@@ -17,9 +17,9 @@
   "sottotitolo": "Una zuppa ristoratrice per l'inverno",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 15,
-    "Cottura": 45,
-    "Totale": 60
+    "preparazione": 15,
+    "cottura": 45,
+    "totale": 60
   },
   "ingredienti": [
     {

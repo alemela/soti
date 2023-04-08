@@ -24,9 +24,9 @@
   "sottotitolo": "<i>Gattò</i> per gli scarsi",
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 40,
-    "Cottura": 30,
-    "Totale": 70
+    "preparazione": 40,
+    "cottura": 30,
+    "totale": 70
   },
   "ingredienti": [
     {

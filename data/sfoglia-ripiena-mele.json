@@ -21,9 +21,9 @@
   "sottotitolo": null,
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 15,
-    "Cottura": 50,
-    "Totale": 65
+    "preparazione": 15,
+    "cottura": 50,
+    "totale": 65
   },
   "ingredienti": [
     {

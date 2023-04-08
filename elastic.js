@@ -8,7 +8,7 @@ const client = new elasticsearch.Client({
 });
 
 // funzione generica per lanciare una query
-async function sendQuery(query, page, size, filterClauses) {
+async function sendQuery(query, page, size, sort, filterClauses) {
   try {
 
     const highlight = esb.highlight()
@@ -26,7 +26,7 @@ async function sendQuery(query, page, size, filterClauses) {
       )
       .agg(esb.termsAggregation('tags', 'tag.keyword').size(10))
       .highlight(highlight)
-      .sort(esb.sort('_score', 'desc'));
+      .sort(esb.sort(sort.split("-")[0], sort.split("-")[1]));
 
     // Esegui la ricerca tramite il client Elasticsearch e restituisci il risultato
     const body = await client.search({
@@ -48,27 +48,28 @@ async function sendQuery(query, page, size, filterClauses) {
 
 // Definisci una funzione che recupera un documento dall'indice "ricette" con un determinato "_id"
 exports.getDocumentById = async function (id) {
-    const query = esb.matchQuery('identificativo', `${id}`);
-    return await sendQuery(query, 1, 1, []);
+  const query = esb.matchQuery('identificativo', `${id}`);
+  return await sendQuery(query, 1, 1, []);
 }
 
-exports.getDocuments = async function (ricerca, page, size, tags) { //XXX tags va generalizzato per altri filtri NON aggiungere altri parametri all'infinito
-    let query;
+exports.getDocuments = async function (ricerca, page, size, sort, tags) { //XXX tags va generalizzato per altri filtri NON aggiungere altri parametri all'infinito
+  let query;
 
-    if (ricerca) {
-        query = esb.multiMatchQuery(process.env.ES_SEARCHABLE_KEYS.split(", "), ricerca) //qui puoi aggiungere nell'array tutti i campi in cui cercare
-        .type('cross_fields')
-        .operator("and")
-    } else {
-        query = esb.matchAllQuery();
-    }
+  if (ricerca) {
+    query = esb.multiMatchQuery(process.env.ES_SEARCHABLE_KEYS.split(", "), ricerca) //qui puoi aggiungere nell'array tutti i campi in cui cercare
+    .type('cross_fields')
+    .operator("and")
+  } else {
+    query = esb.matchAllQuery();
+  }
 
-    if (!page) page = 1;  //XXX questo default è sparso in giro, andrebbe creata una variabile di repo
-    if (!size) size = 10; //XXX questo default è sparso in giro, andrebbe creata una variabile di repo
+  if (!page) page = 1;  //XXX questo default è sparso in giro, andrebbe creata una variabile di repo
+  if (!size) size = 10; //XXX questo default è sparso in giro, andrebbe creata una variabile di repo
+  if (!sort || sort === '') sort = "_score-desc";
 
-    const tagsClauses = tags.map(tag => {
-        return esb.termQuery('tag.keyword', tag); // Va generalizzato
-    });
+  const tagsClauses = tags.map(tag => {
+      return esb.termQuery('tag.keyword', tag); // Va generalizzato
+  });
 
-    return await sendQuery(query, page, size, tagsClauses); //XXX tagsClauses va generalizzato per altri filtri NON aggiungere altri parametri all'infinito
+  return await sendQuery(query, page, size, sort, tagsClauses); //XXX tagsClauses va generalizzato per altri filtri NON aggiungere altri parametri all'infinito
 }

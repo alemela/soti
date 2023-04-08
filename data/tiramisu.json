@@ -21,9 +21,9 @@
   "sottotitolo": "In una versione onesta ma light",
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 50,
-    "Attesa": 120,
-    "Totale": 170
+    "preparazione": 50,
+    "attesa": 120,
+    "totale": 170
   },
   "ingredienti": [
     {

@@ -17,9 +17,9 @@
   "sottotitolo": "Nella versione semplificata, senza roux",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 5,
-    "Cottura": 20,
-    "Totale": 25
+    "preparazione": 5,
+    "cottura": 20,
+    "totale": 25
   },
   "ingredienti": [
     {

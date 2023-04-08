@@ -21,9 +21,9 @@
   "sottotitolo": "Chiatri, oh Chiatri!",
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 15,
-    "Cottura": 20,
-    "Totale": 35
+    "preparazione": 15,
+    "cottura": 20,
+    "totale": 35
   },
   "ingredienti": [
     {

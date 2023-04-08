@@ -22,9 +22,9 @@
   "sottotitolo": "Un vasetto per domarli tutti",
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 20,
-    "Cottura": 45,
-    "Totale": 65
+    "preparazione": 20,
+    "cottura": 45,
+    "totale": 65
   },
   "ingredienti": [
     {

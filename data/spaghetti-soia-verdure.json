@@ -18,9 +18,9 @@
   "sottotitolo": "Per una spolverata orientale",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 15,
-    "Cottura": 30,
-    "Totale": 45
+    "preparazione": 15,
+    "cottura": 30,
+    "totale": 45
   },
   "ingredienti": [
     {

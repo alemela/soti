@@ -18,9 +18,9 @@
   "sottotitolo": "Una pasta gagliarda",
   "numeroPorzioni": 2,
   "tempi": {
-    "Preparazione": 10,
-    "Cottura": 25,
-    "Totale": 35
+    "preparazione": 10,
+    "cottura": 25,
+    "totale": 35
   },
   "ingredienti": [
     {

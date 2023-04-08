@@ -18,7 +18,7 @@ Indice droppato"
 
 # Effettua una richiesta HTTP PUT per creare l'indice "ricette" con il mapping appropriato
 # curl -s -H "Content-Type: application/json" -X PUT "http://localhost:9200/ricette" -d "$MAPPING"
-curl -s -H "Content-Type: application/json" -X PUT "http://${ES_HOST}/${ES_INDEX}"
+curl -s -H "Content-Type: application/json" -X PUT "http://${ES_HOST}/${ES_INDEX}" -d @mapping.json
 echo "
 Indice creato"
 

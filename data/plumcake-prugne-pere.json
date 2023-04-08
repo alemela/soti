@@ -22,9 +22,9 @@
   "sottotitolo": "Un dolce semplice ma piacevole",
   "numeroPorzioni": 4,
   "tempi": {
-    "Preparazione": 25,
-    "Cottura": 40,
-    "Totale": 65
+    "preparazione": 25,
+    "cottura": 40,
+    "totale": 65
   },
   "ingredienti": [
     {

@@ -53,15 +53,15 @@ Scrivi un codice in nodejs che prende tutti i JSON dentro la cartella "data" e a
 
 "tempi": [
         {
-            "nome": "Preparazione",
+            "nome": "preparazione",
             "minuti": 10
         },
         {
-            "nome": "Cottura",
+            "nome": "cottura",
             "minuti": 45
         },
         {
-            "nome": "Totale",
+            "nome": "totale",
             "minuti": 55
         }
     ]
@@ -69,8 +69,8 @@ Scrivi un codice in nodejs che prende tutti i JSON dentro la cartella "data" e a
 mette
 
 "tempi": {
-       "Preparazione": 10
-       "Cottura": 45
-        "Totale": 55
+       "preparazione": 10
+       "cottura": 45
+        "totale": 55
         }
 */
