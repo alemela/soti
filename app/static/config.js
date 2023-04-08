@@ -1,0 +1,1 @@
+window.env = {"FE_WEBSITE_TITLE":"Sotis Ricette","FE_NAVBAR_PLACEHOLDER":"Scrivi la ricetta che vuoi cercare...","FE_FOOTER":"Made with 💓 by Sofi"};

@@ -14,9 +14,9 @@ async function sendQuery(query, page, size, filterClauses) {
     const highlight = esb.highlight()
       .numberOfFragments(3)
       .fragmentSize(150)
-      .fields(process.env.ES_SEARCHABLE_KEYS.split(", ").concat('_all'))
-      .preTags('<em>', '_all')
-      .postTags('</em>', '_all')
+      .fields(process.env.ES_SEARCHABLE_KEYS.split(", "))
+      .preTags('<span class="hl">')
+      .postTags('</span>')
 
     // Crea una richiesta di ricerca usando la query creata sopra
     let searchRequest = esb.requestBodySearch()

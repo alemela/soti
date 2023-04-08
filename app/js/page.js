@@ -12,7 +12,7 @@ fetch("/api/get?id=" + PAGE_ID, {
 }).then(data => {
   data = data.hits.hits[0]._source;
 
-  document.title = data.titolo + " - Sotis Ricette";
+  document.title = data.titolo + " - " + window.env.FE_WEBSITE_TITLE;
 
   let navbarTemplate, contenutoTemplate, footerTemplate;
   $.when(

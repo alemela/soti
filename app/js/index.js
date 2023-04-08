@@ -1,3 +1,5 @@
+document.title = window.env.FE_WEBSITE_TITLE;
+
 const search = function (q) {
     const url = new URL(window.location.href); // crea un oggetto URL dal URL della pagina corrente
     url.searchParams.set('q', q);
@@ -37,12 +39,14 @@ const search = function (q) {
 
         for (i = 0; i < data.hits.hits.length; i++) {
           const hl = data.hits.hits[i].highlight;
+          const source = data.hits.hits[i]._source;
           console.log(hl)
           for (key in hl) {
-            console.log(hl[key]) //TODO finire l'hl, l'idea è di sostituire i campi dentro source se le chiavi sono presenti e aggiungere un boxino sotto se non lo sono
+            source[key] = hl[key];
+            console.log(hl[key]) //TODO aggiungere un boxino sotto se non lo sono
           }
 
-          renderCard(data.hits.hits[i]._source);
+          renderCard(source);
         }
 
         const urlParams = new URLSearchParams(window.location.search);
