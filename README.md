@@ -20,6 +20,22 @@ N.B. cancella e ricrea da zero l'indice. Si aspetta un file `data/mappaing.json`
 node server.js
 ```
 
+# Submodule
+```
+git submodule add git@github.com:alemela/soti.git .
+```
+Copiati nella tua root la cartella `data` e `images`.
+Poi crea un file bash con il seguente codice:
+```
+#!/bin/bash
+cp images lib
+
+cd lib
+node server.js
+```
+
+Se vuoi salvarti il .env in un repo privato crea una copia e mettilo nella root.
+
 # Istructions
 - Come immagine per gli item scegli un'immagine tendenzialmente orizzontale larga almeno 750px.
 - Puoi definire il path tramite la chiave `imageUrl`, può essere un URL o un percorso locale. Di default puoi non compilare la chiave e mettere sotto `/images` le immagini in formato `.png` col nome uguale a `identificativo`. Verranno riconosciute in automatico.
