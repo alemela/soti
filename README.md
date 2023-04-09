@@ -13,7 +13,7 @@ Se hai già un indice Elasticsearch con dei dati non ti occorre fare questo pass
 ```
 ./load-index.sh
 ```
-N.B. cancella e ricrea da zero l'indice. Si aspetta un file `data/mappaing.json`.
+N.B. cancella e ricrea da zero l'indice. Si aspetta un file `data/mapping.json`.
 
 # Run
 ```
@@ -22,19 +22,25 @@ node server.js
 
 # Submodule
 ```
-git submodule add git@github.com:alemela/soti.git .
+git submodule add git@github.com:alemela/soti.git
 ```
 Copiati nella tua root la cartella `data` e `images`.
 Poi crea un file bash con il seguente codice:
 ```
 #!/bin/bash
-cp images lib
+cp -r images soti
 
-cd lib
+cd soti
+node build.js
 node server.js
 ```
 
 Se vuoi salvarti il .env in un repo privato crea una copia e mettilo nella root.
+
+Per futuri aggiornamenti:
+```
+git submodule update --remote --merge
+```
 
 # Istructions
 - Come immagine per gli item scegli un'immagine tendenzialmente orizzontale larga almeno 750px.
