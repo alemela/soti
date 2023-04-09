@@ -36,6 +36,10 @@ router.get('/page', (req, res) => {
 });
 
 router.get('/search', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', 'search.html'));
+});
+
+router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', 'index.html'));
 });
 
