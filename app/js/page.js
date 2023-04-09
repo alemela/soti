@@ -1,7 +1,6 @@
-const urlParams = new URLSearchParams(window.location.search);
-const PAGE_ID  = urlParams.get('id');
+const slug = window.location.pathname.split('/').pop();
 
-fetch("/api/get?id=" + PAGE_ID, {
+fetch("/api/get?id=" + slug, {
   headers : {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
