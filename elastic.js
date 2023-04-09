@@ -4,7 +4,7 @@ const esb = require('elastic-builder');
 require('dotenv').config();
 
 const client = new elasticsearch.Client({
-  host: process.env.ES_HOST
+  host: process.env.ES_HOST + ":" + process.env.ES_PORT
 });
 
 // funzione generica per lanciare una query

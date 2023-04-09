@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataFolder = path.join(__dirname, 'data');
+const dataFolder = path.join(__dirname, 'items');
 
 fs.readdir(dataFolder, (err, files) => {
   if (err) {

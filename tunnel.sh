@@ -1,1 +1,3 @@
-autossh -L 9200:localhost:9200 95.217.134.197
+source .env
+
+autossh -L ${ES_PORT}:${ES_HOST}:${ES_PORT} ${MACHINE_IP}

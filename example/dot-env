@@ -1,7 +1,15 @@
+MACHINE_IP=95.217.134.197
 SERVER_PORT=8040
-ES_HOST="localhost:9200"
+WANNA_HOME=yes
+ES_HOST="localhost"
+ES_PORT=9200
 ES_INDEX="ricette"
 ES_SEARCHABLE_KEYS="titolo, sottotitolo, portata, tag, ingredienti.nome, note"
 FE_WEBSITE_TITLE="Sotis Ricette"
 FE_NAVBAR_PLACEHOLDER="Scrivi la ricetta che vuoi cercare..."
 FE_FOOTER="Made with 💓 by Sofi"
+FE_HL_1="titolo, sottotitolo, portata, tag"
+FE_HL_2="ingredienti.nome, note"
+FE_ORDER_BY="difficoltà|Difficoltà|crescente|decrescente, tempi.totale|Tempo preparazione|crescente|decrescente"
+FE_RESULT_NAME="ricetta"
+FE_RESULTS_NAME="ricette"
