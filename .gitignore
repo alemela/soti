@@ -22,3 +22,8 @@ jspm_packages/
 # dotenv environment variables file
 .env
 app/static/config.js
+
+# Build per Cloudflare Pages
+dist/
+pages/generated/
+.wrangler/

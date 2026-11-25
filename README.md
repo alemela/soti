@@ -41,10 +41,32 @@ Per una modifica di massa a tutte le ricette (rinominare un campo, cambiare un v
 node server.js
 ```
 
+# Cloudflare Pages
+Il sito si può pubblicare anche su Cloudflare Pages, senza un server. La build legge ricette e dizionario e prepara:
+- `dist/`: il sito statico (`app/`, le immagini e un `_redirects` con le rotte di `routes.js`)
+- `pages/generated/data.json`: le ricette già trasformate e la configurazione della ricerca
+
+`/api/search` e `/api/get` diventano Pages Functions (`functions/api`): usano lo stesso motore del server (`search/engine.js`) e rispondono con lo stesso JSON. L'indice si costruisce alla prima richiesta a partire da `data.json`.
+
+Per provarlo in locale, con il `.env` al suo posto:
+```
+npm run build:pages
+npm run preview:pages
+```
+e apri http://localhost:8788.
+
+Impostazioni del progetto su Cloudflare (Workers & Pages → Create → Pages → Connect to Git):
+- Root directory: `soti` se è un submodule, altrimenti vuota
+- Build command: `npm ci && npm run build:pages`; da submodule `cp ../.env .env && npm ci && npm run build:pages`
+- Build output directory: `dist`
+- Variabile d'ambiente `NODE_VERSION`: `22`
+
+Le Functions le trova da sola nella cartella `functions`. Il `.env` serve solo alla build: SERVER_PORT viene ignorata.
+
 # Submodule
 Per avere un sito tuo, con le tue ricette, senza toccare soti: crea un repo tuo e aggiungi soti come submodule.
 ```
-git submodule add git@github.com:alemela/soti.git
+git submodule add https://github.com/alemela/soti.git
 cd soti && npm install && cd ..
 ```
 

@@ -1,4 +1,8 @@
 {
+    "scripts": {
+        "build:pages": "node pages/build.js",
+        "preview:pages": "npx wrangler pages dev dist"
+    },
     "dependencies": {
         "@orama/orama": "^3.1.18",
         "@orama/stopwords": "^3.1.18",
