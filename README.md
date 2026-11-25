@@ -83,6 +83,9 @@ Ulteriori cambiamenti sono possibili ma non garantiscono la compatibilità con f
 Nei parametri che indicano campi della ricetta, i tag si chiamano `tag` e i tempi `tempi.totale`, `tempi.cottura`... (nel file sono `tags` e `tempo_totale`, `tempo_cottura`... per compatibilità con Obsidian).
 
 - SERVER_PORT: la porta su cui girerà questo sito
+- DATA_DIR: cartella delle ricette, relativa alla cartella di soti; facoltativo, default `data/items`. Se usi soti come submodule e le ricette stanno nel tuo repo: `../data/items`
+- DICTIONARY_DIR: cartella del dizionario degli ingredienti; facoltativo, default la sottocartella `ingredienti` di DATA_DIR
+- IMAGES_DIR: cartella delle immagini, relativa alla cartella di soti; facoltativo, default `images`. Da submodule: `../images`
 - WANNA_HOME: "yes" se vuoi anche l'homepage, "no" per andare direttamente sui risultati di ricerca
 - SEARCHABLE_KEYS: campi della ricetta separati da virgola e spazio, sono quelli che vuoi rendere cercabili dalla buca; ne serve almeno uno. Per i campi dentro array di oggetti usa il punto, e.g. `ingredienti.nome`. Ogni ingrediente ha `nome` (la voce del dizionario), `etichetta` (il testo dopo `|`, se c'è), `quantità`, `unità`, `nota` e `sezione`.
 - ITALIAN_KEYS: sottoinsieme di SEARCHABLE_KEYS analizzato in italiano: stemming leggero (e.g. "patata" trova "patate"), stopword ed elisioni (e.g. "dell'acqua" trova "acqua"). Gli altri campi cercano la parola esatta, senza distinguere maiuscole e minuscole. Default: "titolo"

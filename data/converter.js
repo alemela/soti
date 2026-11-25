@@ -1,7 +1,7 @@
 // Applica una modifica a tutte le ricette in data/items e le riscrive come note
 // Markdown compatibili con Obsidian (vedi search/format.js).
 //
-//   node data/converter.js
+//   node data/converter.js      (dalla cartella di soti)
 //
 // Legge sia i .md sia i vecchi .json: lanciato su file .json li converte in .md
 // e cancella i .json. Per una modifica di massa (rinominare un campo, cambiare
@@ -11,8 +11,12 @@
 const fs = require('fs');
 const path = require('path');
 const { readRecipe, stringifyRecipe } = require('../search/format');
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
-const dataFolder = path.join(__dirname, 'items');
+// stessa cartella che legge il server (DATA_DIR nel .env, relativa alla cartella di soti)
+const dataFolder = process.env.DATA_DIR
+  ? path.resolve(path.join(__dirname, '..'), process.env.DATA_DIR)
+  : path.join(__dirname, 'items');
 
 function modifica(ricetta) {
   //INIZIO COSE DA CAMBIARE

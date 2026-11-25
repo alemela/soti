@@ -13,10 +13,10 @@ const { loadDictionary } = require('./dictionary');
 require('dotenv').config();
 
 const DATA_DIR = process.env.DATA_DIR
-  ? path.resolve(process.env.DATA_DIR)
+  ? path.resolve(__dirname, '..', process.env.DATA_DIR) // relativa alla cartella di soti
   : path.join(__dirname, '..', 'data', 'items');
 const DICTIONARY_DIR = process.env.DICTIONARY_DIR
-  ? path.resolve(process.env.DICTIONARY_DIR)
+  ? path.resolve(__dirname, '..', process.env.DICTIONARY_DIR)
   : path.join(DATA_DIR, 'ingredienti');
 
 const splitList = (value) => (value || '').split(',').map((s) => s.trim()).filter(Boolean);
