@@ -42,26 +42,39 @@ node server.js
 ```
 
 # Submodule
+Per avere un sito tuo, con le tue ricette, senza toccare soti: crea un repo tuo e aggiungi soti come submodule.
 ```
 git submodule add git@github.com:alemela/soti.git
+cd soti && npm install && cd ..
 ```
-Copiati nella tua root la cartella `data` e `images`.
-Poi crea un file bash con il seguente codice:
-```
-#!/bin/bash
-cp -r images soti
 
+Nel tuo repo metti:
+- `data/items`: le tue ricette e il dizionario `data/items/ingredienti` (vedi "Dati"); puoi partire copiando quelli di `soti/data/items`
+- `images`: le tue immagini
+- `.env`: la configurazione, sulla base di `soti/example/dot-env`, con in più
+  ```
+  DATA_DIR="../data/items"
+  IMAGES_DIR="../images"
+  ```
+  (i percorsi sono relativi alla cartella `soti`)
+- `run.sh`, per avviare il sito:
+  ```
+  #!/bin/bash
+  cd "$(dirname "$0")"
+  cp .env soti/.env
+
+  cd soti
+  node build.js
+  exec node server.js
+  ```
+
+Dentro `soti` non si copia e non si modifica niente, così gli aggiornamenti non vanno in conflitto. Per aggiornare soti:
+```
 cd soti
-node build.js
-node server.js
+git pull origin main
+npm install
 ```
-
-Se vuoi salvarti il .env in un repo privato crea una copia e mettilo nella root.
-
-Per futuri aggiornamenti:
-```
-git submodule update --remote --merge
-```
+poi nel tuo repo committa la cartella `soti`, che in git è solo il riferimento alla versione usata. Chi clona il tuo repo (o il server) la scarica con `git submodule update --init`.
 
 # Istruzioni
 - Come immagine per gli item scegli un'immagine tendenzialmente orizzontale larga almeno 750px.
