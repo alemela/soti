@@ -5,7 +5,7 @@
       <h1>{{{titolo}}}</h1>
       <p class="sottotitolo">{{{sottotitolo}}}</p>
 
-      {{#tag}}<a class="badge badge-pill badge-dark text-uppercase rounded-0" href="/?tags={{.}}">{{.}}</a> {{/tag}}
+      {{#tag}}<a class="badge badge-pill badge-dark text-uppercase rounded-0" href="/search?tag={{.}}">{{.}}</a> {{/tag}}
 
       <br><br><br>
 
@@ -42,7 +42,7 @@
 
         <ul class="pl-3">
           {{#ingredienti}}
-          <li>{{nome}}: {{quantità}} {{unità}}</li>
+          <li>{{#if riga}}{{riga}}{{else}}{{#if etichetta}}{{etichetta}}{{else}}{{nome}}{{/if}}:{{#if quantità}} {{quantità}}{{/if}}{{#if unità}} {{unità}}{{/if}}{{#if nota}} ({{nota}}){{/if}}{{/if}}</li>
           {{/ingredienti}}
         </ul>
 

@@ -1,5 +1,8 @@
 document.title = window.env.FE_WEBSITE_TITLE;
 
+// valore di un tag pronto per l'URL: i tag evidenziati contengono <span class="hl">, da togliere
+Handlebars.registerHelper('tagParam', value => encodeURIComponent(String(value).replace(/<[^>]*>/g, '')));
+
 const search = function (q) {
   const url = new URL(window.location.href); // crea un oggetto URL dal URL della pagina corrente
   url.searchParams.set('q', q);
@@ -14,7 +17,7 @@ const search = function (q) {
   ).then(function(response){
       return response.json();
   }).then(data => {
-    let navbarTemplate, contenutoTemplate, footerTemplate;
+    let navbarTemplate, footerTemplate, cardTemplate, sidebarTemplate;
     $.when(
       $.get('../template/navbar.html', function(data) {
         navbarTemplate = Handlebars.compile(data);
@@ -24,6 +27,9 @@ const search = function (q) {
       }),
       $.get('../template/organic-card.html', function(data) {
         cardTemplate = Handlebars.compile(data);
+      }),
+      $.get('../template/sidebar.html', function(data) {
+        sidebarTemplate = Handlebars.compile(data);
       })
     ).then(function() {
       const navbar = navbarTemplate({});
@@ -31,6 +37,34 @@ const search = function (q) {
 
       $('#navbar').html(navbar);
       $('#footer').html(footer);
+
+      //filtri
+      $('#sidebar').html(sidebarTemplate({ filters: sidebarFilters(data.aggregations) }));
+
+      $('.filter-term').change(function() {
+        const field = this.dataset.field;
+        const values = activeValues(field).filter(value => value !== this.value);
+        if (this.checked) values.push(this.value);
+        applyFilter(field, values.join('|'));
+      });
+
+      $('.filter-range').each(function() {
+        const box = $(this);
+        const from = box.find('.range-from');
+        const to = box.find('.range-to');
+
+        box.find('input').on('input', function() {
+          // gli estremi non si possono incrociare
+          if (Number(from.val()) > Number(to.val())) (this === from[0] ? to : from).val(this.value);
+          box.find('.range-from-value').text(from.val());
+          box.find('.range-to-value').text(to.val());
+        });
+
+        box.find('input').on('change', function() {
+          const whole = from.val() === from.attr('min') && to.val() === to.attr('max');
+          applyFilter(box.data('field'), whole ? '' : from.val() + '-' + to.val());
+        });
+      });
 
       let count = document.getElementById("resultsCount");
       if (data.hits.total.value === 1) count.innerHTML = data.hits.total.value + " " + window.env.FE_RESULT_NAME;
@@ -93,30 +127,6 @@ const search = function (q) {
 
     $('#main-sort').html(generateSortString(window.env.FE_ORDER_BY))
 
-    //filtri
-    $('#tags-filter').html(generateTags(data.aggregations.tags.buckets));
-
-    $('input:checkbox').change(function() {
-      console.log('Toggle: ' + $(this).prop('checked'));
-      console.log("Change event: " + this.id);
-
-      const url = new URL(window.location.href);
-      console.log(url.href)
-      const actualTags = url.searchParams.get('tags');
-      console.log(actualTags)
-      if ( $(this).prop('checked') ) {
-        if (!actualTags) {
-          url.searchParams.set('tags', this.id);
-        } else {
-          url.searchParams.set('tags', actualTags + "|" + this.id);
-        }
-      } else {
-        //urlParams.remove('tags', this.id) //TODO
-      }
-      console.log(url.href)
-      window.location.href = url.href; //XXX è scomodo che ricarichi
-    });
-
     $('.sort-item').on("click", function() {
       const url = new URL(window.location.href); // crea un oggetto URL dal URL della pagina corrente
       url.searchParams.set("sort", $(this).attr("value"));
@@ -126,15 +136,52 @@ const search = function (q) {
   });
 }
 
-function generateTags(tags) {
-  const output = [];
+// Valori attivi di un filtro "terms" (il vecchio parametro "tags" vale come "tag").
+function activeValues(field) {
+  const params = new URLSearchParams(window.location.search);
+  const raw = [params.get(field), field === 'tag' ? params.get('tags') : null].filter(Boolean).join('|');
+  return raw ? raw.split('|') : [];
+}
 
-  for (tag in tags) {
-    output.push(`<input class="form-check-input" type="checkbox" value="" id="${tags[tag].key}">`);
-    output.push(`<label class="form-check-label" for="${tags[tag].key}">${tags[tag].key} - ${tags[tag].doc_count}</label><br>`);
+// Imposta (o toglie, se value è vuoto) un filtro e ricarica la ricerca.
+function applyFilter(field, value) {
+  const url = new URL(window.location.href);
+  if (field === 'tag') url.searchParams.delete('tags');
+  if (value) url.searchParams.set(field, value);
+  else url.searchParams.delete(field);
+  url.searchParams.delete('page'); // con filtri diversi la pagina corrente potrebbe non esistere più
+  window.location.href = url.href; //XXX è scomodo che ricarichi
+}
+
+// Dati per il template della sidebar: un filtro per ogni aggregazione restituita
+// dal server, nell'ordine configurato in FILTERS.
+function sidebarFilters(aggregations) {
+  const params = new URLSearchParams(window.location.search);
+  const filters = [];
+
+  for (const key in aggregations) {
+    const agg = aggregations[key];
+    const filter = { key, label: agg.meta.label };
+
+    if (agg.meta.type === 'terms') {
+      const active = activeValues(key);
+      filter.terms = true;
+      filter.active = active.length > 0;
+      filter.buckets = agg.buckets.map(b => Object.assign({}, b, { checked: active.includes(b.key) }));
+    } else if (agg.meta.type === 'range' && agg.min !== null) {
+      const [from, to] = (params.get(key) || '-').split('-');
+      filter.range = true;
+      filter.active = params.has(key);
+      filter.min = agg.min;
+      filter.max = agg.max;
+      filter.from = from !== '' ? Math.max(Number(from), agg.min) : agg.min;
+      filter.to = to !== undefined && to !== '' ? Math.min(Number(to), agg.max) : agg.max;
+    } else {
+      continue;
+    }
+    filters.push(filter);
   }
-
-  return output.join(" ");
+  return filters;
 }
 
 function generateSortString(sortConfig) {
@@ -165,7 +212,8 @@ $(document).ready(function() {
     $('.sidebar').toggleClass('show');
   });
 
-  $('#sidebarClose').click(function() {
+  // la sidebar viene caricata dopo, quindi il click va delegato al document
+  $(document).on('click', '#sidebarClose', function() {
     $('.sidebar').removeClass('show');
   });
 });
@@ -175,11 +223,3 @@ $(document).ready(function() {
 
 
 loadPage();
-
-//TODO finire la lettura dei parametri URL per disegnare la zona dei filtri attivi
-const searchParams = new URLSearchParams(window.location.search);
-console.log(Array.from(searchParams.keys()))
-for (const key of searchParams.keys()) {
-  console.log(key);
-  console.log(searchParams.get(key))
-}

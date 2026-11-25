@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const elastic = require('./elastic');
+const search = require('./search');
 const path = require('path');
 require('dotenv').config();
 
@@ -9,7 +9,7 @@ require('dotenv').config();
 router.get('/api/get', async (req, res) => {
   try {
     const id = req.query.id;
-    const result = await elastic.getDocumentById(id);
+    const result = search.getDocumentById(id);
     res.json(result);
   } catch (err) {
     console.error(err);
@@ -24,9 +24,9 @@ router.get('/api/search', async (req, res) => {
     const page = req.query.page;
     const size = req.query.size;
     const sort = req.query.sort;
-    const tags = req.query.tags ? req.query.tags.split("|") : [];
+    const filters = search.parseFilters(req.query); // filtri configurati in FILTERS
 
-    const result = await elastic.getDocuments(q, page, size, sort, tags); // Chiama la funzione di elastic.js per recuperare il documento
+    const result = search.getDocuments(q, page, size, sort, filters);
     res.json(result); // Restituisci il documento come JSON
   } catch (err) {
     console.error(err);
@@ -50,7 +50,8 @@ router.get('/', (req, res) => {
   if (process.env.WANNA_HOME === "yes") {
     res.sendFile(path.join(__dirname, 'app', 'home.html'));
   } else {
-    res.redirect('/search');
+    const query = req.originalUrl.indexOf('?');
+    res.redirect('/search' + (query >= 0 ? req.originalUrl.slice(query) : ''));
   }
 });
 

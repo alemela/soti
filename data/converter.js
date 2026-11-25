@@ -1,76 +1,58 @@
+// Applica una modifica a tutte le ricette in data/items e le riscrive come note
+// Markdown compatibili con Obsidian (vedi search/format.js).
+//
+//   node data/converter.js
+//
+// Legge sia i .md sia i vecchi .json: lanciato su file .json li converte in .md
+// e cancella i .json. Per una modifica di massa (rinominare un campo, cambiare
+// un valore...) scrivila nella funzione "modifica": riceve ogni ricetta come
+// oggetto, nella stessa forma dei vecchi JSON, con i testi in Markdown.
+
 const fs = require('fs');
 const path = require('path');
+const { readRecipe, stringifyRecipe } = require('../search/format');
 
 const dataFolder = path.join(__dirname, 'items');
 
-fs.readdir(dataFolder, (err, files) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
+function modifica(ricetta) {
+  //INIZIO COSE DA CAMBIARE
 
-  files.forEach((file) => {
-    const filePath = path.join(dataFolder, file);
+  //FINE COSE DA CAMBIARE
+  return ricetta;
+}
 
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
+// HTML dei vecchi JSON -> Markdown.
+function htmlToMarkdown(text) {
+  if (typeof text !== 'string') return text;
+  return text
+    .replace(/<a href=['"]\/[^'"?]*\?id=([^'"&]+)['"]>(.*?)<\/a>/g, (_, id, label) => (label === id ? `[[${id}]]` : `[[${id}|${label}]]`))
+    .replace(/<\/?(i|em)>/g, '*')
+    .replace(/<\/?(b|strong)>/g, '**')
+    .replace(/\s*<br\s*\/?>\s*/g, '\n\n');
+}
 
-      const jsonData = JSON.parse(data);
+function fromJson(ricetta) {
+  const { identificativo, ...rest } = ricetta;
+  return {
+    identificativo,
+    ...rest,
+    sottotitolo: htmlToMarkdown(rest.sottotitolo),
+    preparazione: (rest.preparazione || []).map(htmlToMarkdown),
+    note: htmlToMarkdown(rest.note),
+  };
+}
 
-      //INIZIO COSE DA CAMBIARE
+for (const file of fs.readdirSync(dataFolder).sort()) {
+  const ext = path.extname(file);
+  if (ext !== '.md' && ext !== '.json') continue;
 
-      if (Array.isArray(jsonData.tempi)) {
-        const tempiObj = {};
-        jsonData.tempi.forEach((tempo) => {
-          tempiObj[tempo.nome] = tempo.minuti;
-        });
-        jsonData.tempi = tempiObj;
-      }
+  const filePath = path.join(dataFolder, file);
+  let ricetta = readRecipe(filePath, fs.readFileSync(filePath, 'utf8'));
+  if (ext === '.json') ricetta = fromJson(ricetta);
+  ricetta = modifica(ricetta);
 
-      //FINE COSE DA CAMBIARE
-
-      const newJsonData = JSON.stringify(jsonData, null, 2);
-
-      fs.writeFile(filePath, newJsonData, (err) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-
-        console.log(`File ${filePath} modificato con successo.`);
-      });
-    });
-  });
-});
-
-/*
-Prompt GPT
-
-Scrivi un codice in nodejs che prende tutti i JSON dentro la cartella "data" e applica una sostituzione. Al posto di
-
-"tempi": [
-        {
-            "nome": "preparazione",
-            "minuti": 10
-        },
-        {
-            "nome": "cottura",
-            "minuti": 45
-        },
-        {
-            "nome": "totale",
-            "minuti": 55
-        }
-    ]
-
-mette
-
-"tempi": {
-       "preparazione": 10
-       "cottura": 45
-        "totale": 55
-        }
-*/
+  const mdPath = path.join(dataFolder, `${ricetta.identificativo}.md`);
+  fs.writeFileSync(mdPath, stringifyRecipe(ricetta));
+  if (ext === '.json') fs.unlinkSync(filePath);
+  console.log(`${file} -> ${path.basename(mdPath)}`);
+}
